@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="tr">
+  {% include head.html %}
+  <body>
+    <main>
+      {% include header.html %}
+      <section class="article">
+        <div class="article-header">
+          {% if page.title %}
+          <h2 class="article-title">{{page.title}}</h2>
+          {% endif %}
+          {% if page.date %}
+          <small class="date">{{ page.date | date: "%e %B %Y %A" | replace: "January", "Ocak" | replace: "February", "Şubat" | replace: "March", "Mart" | replace: "April", "Nisan" | replace: "May", "Mayıs" | replace: "June", "Haziran" | replace: "July", "Temmuz" | replace: "August", "Ağustos" | replace: "September", "Eylül" | replace: "October", "Ekim" | replace: "November", "Kasım" | replace: "December", "Aralık" | replace: "Sunday", "Pazar" | replace: "Monday", "Pazartesi" | replace: "Tuesday", "Salı" | replace: "Wednesday", "Çarşamba" | replace: "Thursday", "Perşembe" | replace: "Friday", "Cuma" | replace: "Saturday", "Cumartesi" }}</small>
+          {% endif %}
+          {% if page.categories %}
+          <div class="categories">
+            {% for c in page.categories %}
+            <a href="#!" class="category">{{c}}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        <div class="content">{{content}}</div>
+        {% if page.tags %}
+        <div class="tags">
+          {% for t in page.tags %}
+          <a href="#!" class="tag">{{t}}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </section>
+      {% include footer.html %}
+    </main>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+source: .
+destination: ./_site
+plugins_dir: _plugins
+layouts_dir: _layouts
+data_dir: _data
+includes_dir: _includes
+sass:
+  sass_dir: _sass
+safe: false # Disable non-whitelisted plugins, caching to disk, and ignore symbolic links
+disable_disk_cache: false
+ignore_theme_config: true
+include: [ ".htaccess" ]
+exclude: [ "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/", ".idea/" ]
+keep_files: [ ".git", ".svn" ]
+timezone: Europe/Istanbul
+encoding: UTF-8
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+strict_front_matter: true # Cause a build to fail if there is a YAML syntax error in a page's front matter
+force_polling: false # Force watch to use polling
+
+# Filtering Content
+show_drafts: false # Process and render draft posts
+limit_posts: 0 # Limit the number of posts to parse and publish
+future: false # Publish posts or collection documents with a future date
+unpublished: false # Render posts that were marked as unpublished
+
+# Plugins
+whitelist:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false # Produce an index for related posts (requires the classifier-reborn plugin)
+excerpt_separator: "<!-- more -->"
+incremental: false # experimental
+
+# Serving
+host: 127.0.0.1
+port: 4000
+livereload: false # Reload a page automatically on the browser when its content is edited
+#livereload_ignore: [ ] # File glob patterns for LiveReload to ignore
+#livereload_min_delay: 0
+#livereload_max_delay: 0
+open_url: false # Open the site's URL in the browser
+detach: false # Detach the server from the terminal
+skip_initial_build: false # Skips the initial site build which occurs before the server is started
+show_dir_listing: false # Show a directory listing instead of loading your index file
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Outputting
+paginate: 5
+paginate_path: "/page:num/"
+page_excerpts: false
+
+quiet: false # Silence the normal output from Jekyll during a build
+verbose: false # Print verbose output
+permalink: /:categories/:title
+collections:
+  pages:
+    output: true
+    permalink: /:path/:basename:output_ext
+  posts:
+    output: true
+    permalink: /:categories/:slug
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: posts
+    values:
+      title: "Bilinmeyen"
+      layout: post
+      categories: [ ]
+      tags: [ ]
+      last_modified_at: null
+      change_frequency: null
+      priority: null
+  -
+    scope:
+      path: ""
+      type: pages
+    values:
+      title: "Bilinmeyen"
+      layout: default
+      categories: [ ]
+      tags: [ ]
+      last_modified_at: null
+      change_frequency: null
+      priority: null
+      exclusion_from_sitemap: false
+  -
+    scope:
+      path: "assets/img"
+    values:
+      image: true
+
+profile: false # Generate a Liquid rendering profile to help you identify performance bottlenecks
+liquid:
+  error_mode: strict # (lax|warn|strict)
+  strict_filters: true
+  strict_variables: true
+
+# Markdown Processors
+kramdown:
+  auto_ids: true
+  entity_output: as_char
+  toc_levels: [ 1, 2, 3, 4, 5, 6 ]
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  input: GFM
+  hard_wrap: false
+  footnote_nr: 1
+
+title: Abdullah Pazarbaşı
+author:
+  name: Abdullah Pazarbaşı
+  email: mail@abdullahpazarbasi.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Kişisel blog.

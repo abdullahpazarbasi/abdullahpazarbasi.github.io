@@ -1,0 +1,33 @@
+name: Abdullah Pazarbaşı
+dp: https://avatars.githubusercontent.com/u/18077282?v=4
+description: "
+  <p>
+    Yazılım mimarı ve full-stack yazılım geliştiricisi.
+  </p>
+  <br/>
+  <p>
+    Kendisine <a href='https://www.linkedin.com/in/mabdullahpazarbasi' target='_blank'>LinkedIn</a> üzerinden ulaşabilirsiniz.
+  </p>
+"
+email: mail@abdullahpazarbasi.com
+contact:
+  - title: linkedin
+    url: https://www.linkedin.com/in/mabdullahpazarbasi
+    color: "#0a65c2"
+    bgcolor: ""
+  - title: github
+    url: https://github.com/abdullahpazarbasi
+    color: "#ffffff"
+    bgcolor: ""
+  - title: stackshare
+    url: https://stackshare.io/abdullahpazarbasi/personal
+    color: "#0a90f9"
+    bgcolor: ""
+  - title: medium
+    url: https://medium.com/@abdullahpazarbasi
+    color: "#ffffff"
+    bgcolor: ""
+  - title: email
+    url: mailto:mail@abdullahpazarbasi.com
+    color: "#eedd99"
+    bgcolor: ""

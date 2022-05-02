@@ -1,0 +1,95 @@
+---
+title: Blog
+date: null
+layout: null
+permalink: null
+categories: null
+tags: null
+---
+
+<!doctype html>
+<html lang="tr">
+{% include head.html %}
+<body>
+<main>
+    {% include header.html %}
+    {% include bio.html %}
+
+    {% if paginator and paginator.posts %}
+    <section class="articles">
+        {% for post in paginator.posts %}
+        <article class="article">
+            {% if post.title %}
+            <h2 class="article-title">
+                <a href="{{ site.baseurl }}{{ post.url }}"> {{ post.title }} </a>
+            </h2>
+            {% endif %}
+            {% if post.date %}
+            <small class="date">{{ post.date | date: "%e %B %Y %A" | replace: "January", "Ocak" | replace: "February", "Şubat" | replace: "March", "Mart" | replace: "April", "Nisan" | replace: "May", "Mayıs" | replace: "June", "Haziran" | replace: "July", "Temmuz" | replace: "August", "Ağustos" | replace: "September", "Eylül" | replace: "October", "Ekim" | replace: "November", "Kasım" | replace: "December", "Aralık" | replace: "Sunday", "Pazar" | replace: "Monday", "Pazartesi" | replace: "Tuesday", "Salı" | replace: "Wednesday", "Çarşamba" | replace: "Thursday", "Perşembe" | replace: "Friday", "Cuma" | replace: "Saturday", "Cumartesi" }}</small>
+            {% endif %}
+            {% if post.categories %}
+            <div class="categories">
+                {% for c in post.categories %}
+                <a href="#!" data-base-url="{{site.baseurl}}" class="category">{{ c }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </article>
+        {% endfor %}
+        {% if paginator.total_pages > 1 %}
+        <!-- pagination -->
+        <div class="pagination">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | relative_url }}">&laquo;</a>
+            {% else %}
+            <span>&laquo;</span>
+            {% endif %}
+
+            {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+            <em>{{ page }}</em>
+            {% elsif page == 1 %}
+            <a href="{{ '/' | relative_url }}">{{ page }}</a>
+            {% else %}
+            <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+            {% endif %}
+            {% endfor %}
+
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}">&raquo;</a>
+            {% else %}
+            <span>&raquo;</span>
+            {% endif %}
+        </div>
+        <!-- /pagination -->
+        {% endif %}
+    </section>
+    {% elsif site.posts %}
+    <section class="articles">
+        {% for post in site.posts %}
+        <article class="article">
+            {% if post.title %}
+            <h2 class="article-title">
+                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            </h2>
+            {% endif %}
+            {% if post.date %}
+            <small class="date">{{ post.date | date: "%e %B %Y %A" | replace: "January", "Ocak" | replace: "February", "Şubat" | replace: "March", "Mart" | replace: "April", "Nisan" | replace: "May", "Mayıs" | replace: "June", "Haziran" | replace: "July", "Temmuz" | replace: "August", "Ağustos" | replace: "September", "Eylül" | replace: "October", "Ekim" | replace: "November", "Kasım" | replace: "December", "Aralık" | replace: "Sunday", "Pazar" | replace: "Monday", "Pazartesi" | replace: "Tuesday", "Salı" | replace: "Wednesday", "Çarşamba" | replace: "Thursday", "Perşembe" | replace: "Friday", "Cuma" | replace: "Saturday", "Cumartesi" }}</small>
+            {% endif %}
+            {% if post.categories %}
+            <div class="categories">
+                {% for c in post.categories %}
+                <a href="#!" data-base-url="{{ site.baseurl }}" class="category">{{ c }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </article>
+        {% endfor %}
+    </section>
+    {% else %}
+    İçerik yok...
+    {% endif %}
+    {% include footer.html %}
+</main>
+</body>
+</html>

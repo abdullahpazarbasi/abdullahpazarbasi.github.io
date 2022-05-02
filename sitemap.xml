@@ -1,0 +1,55 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for post in site.posts %}
+  {% if post.published %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    {% if post.last_modified_at %}
+    <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
+    {% elsif post.date %}
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    {% else %}
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    {% endif %}
+    {% if post.change_frequency %}
+    <changefreq>{{ post.change_frequency }}</changefreq>
+    {% else %}
+    <changefreq>monthly</changefreq>
+    {% endif %}
+    {% if post.priority %}
+    <priority>{{ post.priority }}</priority>
+    {% else %}
+    <priority>0.5</priority>
+    {% endif %}
+  </url>
+  {% endif %}
+  {% endfor %}
+  {% for page in site.pages %}
+  {% if page.exclusion_from_sitemap == false %}
+  <url>
+    <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
+    {% if page.last_modified_at %}
+    <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+    {% elsif page.date %}
+    <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+    {% else %}
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    {% endif %}
+    {% if page.change_frequency %}
+    <changefreq>{{ page.change_frequency }}</changefreq>
+    {% else %}
+    <changefreq>monthly</changefreq>
+    {% endif %}
+    {% if page.priority %}
+    <priority>{{ page.priority }}</priority>
+    {% else %}
+    <priority>0.3</priority>
+    {% endif %}
+  </url>
+  {% endif %}
+  {% endfor %}
+</urlset>

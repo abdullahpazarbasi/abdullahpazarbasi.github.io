@@ -1,0 +1,21 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>{{site.title}} | {{page.title}}</title>
+  {% if page.layout == "post" %}
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/post.css" />
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/syntax.css" />
+  {% else %}
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/blog.css" />
+  {% endif %}
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/social.css" />
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/common.css" />
+  {% if page.layout == "post" %}
+  <script defer src="{{site.baseurl}}/assets/js/lbox.js"></script>
+  {% endif %}
+</head>
