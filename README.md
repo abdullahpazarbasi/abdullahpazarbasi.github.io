@@ -1,23 +1,12 @@
----
-title: "Jekyll Markdown"
-date: 2021-11-04
-layout: post
-categories: [ "jekyll" ]
-tags: [  ]
-published: false
----
-
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`
 
-[Link to another page](./another-page.html).
+[Link to another page](./index.html).
 
 There should be whitespace between paragraphs.
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+There should be whitespace between paragraphs.
 
 #### Image
-
-Images can be clicked to enlarge :) .
 
 ![Dummy Image](https://picsum.photos/800/300)
 
