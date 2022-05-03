@@ -42,7 +42,7 @@ footer p {
 #category-modal-bg {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
   display: none;
   visibility: hidden;
@@ -57,7 +57,7 @@ footer p {
   border-radius: 1rem;
   padding: 1rem;
   margin: auto;
-  background-color: var(--dark);
+  background-color: rgba(0, 0, 0, 0.75);
   display: none;
   visibility: hidden;
   line-height: 140%;
@@ -81,6 +81,50 @@ footer p {
   visibility: visible;
 }
 
+/* tag modal */
+
+#tag-modal-bg {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: none;
+  visibility: hidden;
+}
+
+#tag-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  max-width: 850px;
+  max-height: 60vh;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: none;
+  visibility: hidden;
+  line-height: 140%;
+}
+
+#tag-modal-content {
+  position: relative;
+  max-height: calc(100% - 5rem);
+  overflow: auto;
+}
+
+#tag-modal-title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+#tag-modal-bg.open,
+#tag-modal.open {
+  display: block;
+  visibility: visible;
+}
+
 .modal-article,
 .modal-article-date {
   display: block;
@@ -98,7 +142,8 @@ footer p {
 }
 
 .modal-article:hover {
-  background: var(--space);
+  color: var(--dark);
+  background-color: var(--light);
 }
 
 hr {
