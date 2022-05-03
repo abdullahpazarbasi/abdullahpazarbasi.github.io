@@ -31,10 +31,39 @@ body {
   background-color: var(--space);
   font-family: "JetBrains Mono", monospace;
   line-height: 2rem;
+  scroll-behavior: smooth;
 }
 
 footer p {
   font-size: 0.8rem;
+}
+
+/* back to top */
+
+body {
+  display: grid;
+  grid-template-columns: auto 0;
+}
+
+.backtotop {
+  --offset: 50px;
+
+  position: sticky;
+  bottom: 2rem;
+  margin-top: calc(100vh + var(--offset));
+  margin-right: 2rem;
+  margin-bottom: unset;
+  margin-left: unset;
+  place-self: end;
+
+  /* visual styling */
+  text-decoration: none;
+  padding: 1rem 1.618rem 1rem 1.618rem;
+  font-family: sans-serif;
+  color: var(--light);
+  background: var(--dark);
+  border-radius: 1rem;
+  white-space: nowrap;
 }
 
 /* category modal */

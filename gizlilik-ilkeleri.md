@@ -1,14 +1,14 @@
 ---
 title: "Gizlilik İlkeleri"
-date: 2019-05-14 10:29:59 +0300
+date: 2016-01-01 00:00:00 +0300
 layout: page
 ---
 
-## Ben kimim
+## Ben kimim ?
 
 Web sitemin adresi: https://www.abdullahpazarbasi.com .
 
-## Hangi kişisel bilgileri ne amaçla topluyoruz
+## Hangi kişisel bilgileri ne amaçla topluyorum ?
 
 ### Yorumlar
 
@@ -36,32 +36,30 @@ Bu sitedeki makaleler gömülü içerik (ör. videolar, resimler, makaleler, vb.
 
 Bu web siteleri sizin hakkınızda veri toplayabilir, çerez kullanabilir, üçüncü taraf tarafından gömülmüş şeklide takip yapabilir ve bir hesabınız varsa ve bu web sitesinde oturum açtıysanız, gömülen içerikle etkleşiminizi takip etme dahil olmak üzere, bu gömülen içerikle etkileşiminizi izleyebilir.
 
-## Verinizi kimlerle paylaşıyoruz
+## Verinizi kimlerle paylaşıyorum ?
 
-Verinizi kimse ile **paylaşmıyoruz**.
+Verinizi kimse ile **paylaşmıyorum**.
 
-## Verilerinizi ne kadar süre tutarız
+## Verilerinizi ne kadar süre tutarım ?
 
 Bir yorum bırakırsanız, yorum ve meta verileri süresiz olarak saklanır. Böylece, takip eden yorumlarınızı denetim kuyruğunda tutmak yerine otomatik olarak tanıyabilir ve onaylayabiliriz.
 
-Web sitemize kayıt yaptıran kullanıcılar için (varsa) kullanıcı profilinde sağladıkları kişisel bilgileri de saklarız. Tüm kullanıcılar kişisel bilgilerini istedikleri zaman görebilir, düzenleyebilir veya silebilir (kullanıcı adı değiştirme hariç). Web sitesi yöneticileri de bu bilgileri görebilir ve düzenleyebilir.
+Web sitemize kayıt yaptıran kullanıcılar için (varsa) kullanıcı profilinde sağladıkları kişisel bilgileri de saklarım. Tüm kullanıcılar kişisel bilgilerini istedikleri zaman görebilir, düzenleyebilir veya silebilir (kullanıcı adı değiştirme hariç). Web sitesi yöneticileri de bu bilgileri görebilir ve düzenleyebilir.
 
-## Verileriniz üzerindeki haklarınız neler
+## Verileriniz üzerindeki haklarınız neler ?
 
 Bu sitede bir hesabınız veya yorumlarınız varsa, bize sağladığınız veriler dahil olmak üzere, hakkınızda tuttuğumuz kişisel verilerin dışa aktarılmış bir dosyasını almayı isteyebilirsiniz. Ayrıca, hakkınızda tuttuğumuz tüm kişisel verileri de silmeyi isteyebilirsiniz. Bu, idari, yasal veya güvenlik amaçlarına uymak zorunda olduğumuz hiçbir veriyi içermez.
 
-## Verinizi nereye gönderiyoruz
+## Verinizi nereye gönderiyorum ?
 
 Ziyaretçi yorumları otomatik istenmeyen yorum algılama servisi aracılığıyla kontrol edilebilir.
 
 ## Ek bilgi
 
-### Verinizi nasıl koruyoruz
+### Hangi veri ihlali prosedürlerimiz var ?
 
-### Hangi veri ihlali prosedürlerimiz var
+### Hangi üçüncü taraflardan veri alıyorum ?
 
-### Hangi üçüncü taraflardan veri alıyoruz
-
-### Kullanıcı verileriyle ne tip otomatik karar verme ve/veya profilleme yapıyoruz?
+### Kullanıcı verileriyle ne tip otomatik karar verme ve/veya profilleme yapıyorum ?
 
 ### Sanayi bakanlığı kamuyu aydınlatma yükümlülüğü
