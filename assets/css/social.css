@@ -1,103 +1,91 @@
 @font-face {
-    font-family: 'icomoon';
-    src: url('fonts/icomoon.eot?srzt86');
-    src: url('fonts/icomoon.eot?srzt86#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?srzt86') format('truetype'),
-    url('fonts/icomoon.woff?srzt86') format('woff'),
-    url('fonts/icomoon.svg?srzt86#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?srzt86');
+  src: url('fonts/icomoon.eot?srzt86#iefix') format('embedded-opentype'),
+  url('fonts/icomoon.ttf?srzt86') format('truetype'),
+  url('fonts/icomoon.woff?srzt86') format('woff'),
+  url('fonts/icomoon.svg?srzt86#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    speak: never;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-email:before {
-    content: "\e900";
+  content: "\e900";
 }
 
 .icon-github:before {
-    content: "\e902";
+  content: "\e902";
 }
 
 .icon-gitlab:before {
-    content: "\e903";
+  content: "\e903";
 }
 
 .icon-linkedin:before {
-    content: "\e904";
+  content: "\e904";
 }
 
 .icon-medium:before {
-    content: "\e901";
+  content: "\e901";
 }
 
 .icon-rss:before {
-    content: "\e905";
+  content: "\e905";
 }
 
 .icon-stackshare:before {
-    content: "\e906";
+  content: "\e906";
 }
 
 #social-wrapper {
-    margin: 1.2rem 0 0 0;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+  margin: 1.2rem 0 0 0;
 }
 
 .dabbah {
-    -webkit-animation: dabbah 200ms 5;
-    animation: dabbah 200ms 5;
+  -webkit-animation: dabbah 200ms 5;
+  animation: dabbah 200ms 5;
 }
 
 .dabbah:hover {
-    -webkit-animation: dabbah 200ms infinite;
-    animation: dabbah 200ms infinite;
+  -webkit-animation: dabbah 200ms infinite;
+  animation: dabbah 200ms infinite;
 }
 
 #social-wrapper .icon {
-    margin: 0 16px;
-    font-size: 1.2em;
+  margin: 0 16px 0 0;
+  font-size: 1.2em;
 }
 
 @keyframes dabbah {
-    0% {
-        text-shadow: 5px 4px #f44336, -5px -6px #2196f3;
-    }
-    25% {
-        text-shadow: -5px -6px #f44336, 5px 4px #2196f3;
-    }
-    50% {
-        text-shadow: 5px -4px #f44336, -8px 4px #2196f3;
-    }
-    75% {
-        text-shadow: -8px -4px #f44336, -5px -4px #2196f3;
-    }
-    100% {
-        text-shadow: -5px 0 #f44336, 5px -4px #2196f3;
-    }
+  0% {
+    text-shadow: 5px 4px #ff6455, -5px -6px #4bafff;
+  }
+  25% {
+    text-shadow: -5px -6px #ff6455, 5px 4px #4bafff;
+  }
+  50% {
+    text-shadow: 5px -4px #ff6455, -8px 4px #4bafff;
+  }
+  75% {
+    text-shadow: -8px -4px #ff6455, -5px -4px #4bafff;
+  }
+  100% {
+    text-shadow: -5px 0 #ff6455, 5px -4px #4bafff;
+  }
 }

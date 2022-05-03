@@ -1,13 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,300;0,400;0,800;1,100;1,300;1,400;1,800&display=swap");
+
 :root {
-  --gray-1: #3f3f3f;
-  --gray-2: #32353a;
-  --gray-3: #25282c;
-  --gray-4: #151618;
-  --gray-5: #151618;
-  --gray-6: #111111;
-  --white-1: #eeeeee;
-  --white-2: #a9abb3;
+  --space: #1f1c19;
+  --button: #aca7a2;
+  --buttontext: #2a2520;
+  --frame: #aca7a2;
+  --line: #aca7a2;
+  --fore: #aca7a2;
+  --back: #2c2722;
+  --light: #efeae5;
+  --dark: #2a2520;
+  --link: #ffff00;
 }
+
+* {
+  font-family: inherit;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  -webkit-user-drag: none;
+  -moz-window-dragging: none;
+  -webkit-tap-highlight-color: transparent;
+}
+* img {
+  max-width: 100%;
+}
+html,
+body {
+  color: var(--fore);
+  background-color: var(--space);
+  font-family: "JetBrains Mono", monospace;
+  line-height: 2rem;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+
+/* category modal */
+
 #category-modal-bg {
   position: fixed;
   inset: 0;
@@ -16,6 +47,7 @@
   display: none;
   visibility: hidden;
 }
+
 #category-modal {
   position: fixed;
   inset: 0;
@@ -25,49 +57,56 @@
   border-radius: 1rem;
   padding: 1rem;
   margin: auto;
-  background: var(--gray-3);
+  background-color: var(--dark);
   display: none;
   visibility: hidden;
   line-height: 140%;
 }
+
 #category-modal-content {
-  display: relative;
+  position: relative;
   max-height: calc(100% - 5rem);
   overflow: auto;
 }
+
 #category-modal-title {
   margin-bottom: 1rem;
   font-size: 2rem;
   padding: 1rem;
 }
+
 #category-modal-bg.open,
 #category-modal.open {
   display: block;
   visibility: visible;
 }
+
 .modal-article,
 .modal-article-date {
   display: block;
-  color: var(--white-2);
+  color: var(--fore);
 }
+
 .modal-article {
   margin-bottom: 0.5rem;
   padding: 0.5rem 1rem;
   transition: all 0.2s ease-in-out;
 }
+
 .modal-article-date {
   font-size: 0.8rem;
 }
+
 .modal-article:hover {
-  background: var(--gray-4);
+  background: var(--space);
 }
 
 hr {
-	border-top: 2px dashed var(--white-2)!important;
-	border-bottom: none!important;
-	border-left: none!important;
-	border-right: none!important;
-	margin-bottom: 1.75rem!important;
+  border-top: 2px dashed var(--line) !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  margin-bottom: 1.75rem !important;
 }
 
 /* pagination section */
@@ -77,7 +116,7 @@ hr {
 }
 
 .pagination a {
-  color: cyan;
+  color: var(--link);
   border-bottom: none;
 }
 
@@ -85,6 +124,6 @@ hr {
 }
 
 .pagination em {
-  color: #ffffff;
+  color: var(--light);
   font-weight: bold;
 }
