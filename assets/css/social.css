@@ -53,8 +53,15 @@
   content: "\e906";
 }
 
-#social-wrapper {
+/* author contact */
+
+.author-contact {
   margin: 1.2rem 0 0 0;
+}
+
+.author-contact .icon {
+  margin: 0 16px 0 0;
+  font-size: 1.2em;
 }
 
 .dabbah {
@@ -65,11 +72,6 @@
 .dabbah:hover {
   -webkit-animation: dabbah 200ms infinite;
   animation: dabbah 200ms infinite;
-}
-
-#social-wrapper .icon {
-  margin: 0 16px 0 0;
-  font-size: 1.2em;
 }
 
 @keyframes dabbah {

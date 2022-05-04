@@ -22,9 +22,11 @@
   -moz-window-dragging: none;
   -webkit-tap-highlight-color: transparent;
 }
+
 * img {
   max-width: 100%;
 }
+
 html,
 body {
   color: var(--fore);
@@ -32,6 +34,12 @@ body {
   font-family: "JetBrains Mono", monospace;
   line-height: 2rem;
   scroll-behavior: smooth;
+}
+
+main {
+  margin: 0 auto;
+  padding: 3rem 0;
+  max-width: 750px;
 }
 
 footer p {
@@ -183,7 +191,7 @@ hr {
   margin-bottom: 1.75rem !important;
 }
 
-/* pagination section */
+/* pagination */
 
 .pagination {
   cursor: default;
@@ -200,4 +208,51 @@ hr {
 .pagination em {
   color: var(--light);
   font-weight: bold;
+}
+
+@media screen and (max-width: 760px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  main {
+    max-width: 740px;
+  }
+
+  #category-modal {
+    max-width: 740px;
+  }
+
+  #tag-modal {
+    max-width: 740px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    max-width: 460px;
+  }
+
+  #category-modal {
+    max-width: 460px;
+  }
+
+  #tag-modal {
+    max-width: 460px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main {
+    max-width: 300px;
+    padding: 0 0 1rem 0;
+  }
+
+  #category-modal {
+    max-width: 300px;
+  }
+
+  #tag-modal {
+    max-width: 300px;
+  }
 }

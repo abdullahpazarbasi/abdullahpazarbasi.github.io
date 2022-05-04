@@ -1,37 +1,37 @@
 header {
   padding: 2rem 0 4rem 0;
 }
+
 header .site-title {
   font-size: 4rem;
   font-weight: bolder;
   line-height: 110%;
   color: var(--light);
 }
-main {
-  margin: 0 auto;
-  max-width: 650px;
-  padding: 3rem 0;
-}
 
 /* header */
 
-#bio {
+.author {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-#img-wrapper img {
+
+.author-avatar img {
   border-radius: 50%;
   max-width: 100px;
 }
-#bio-wrapper {
+
+.author-info {
   margin-left: 1rem;
 }
-#text-wrapper {
+
+.author-description {
   line-height: 1.2rem;
   font-weight: 300;
 }
-#text-wrapper a {
+
+.author-description a {
   color: var(--link);
   border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -45,12 +45,14 @@ main {
   row-gap: 2rem;
   margin: 4rem 0 3rem 0;
 }
+
 .articles .article {
   padding: 2rem;
   background-color: var(--dark);
   border-radius: 15px;
   transition: all 0.2s ease-in-out;
 }
+
 .articles .article .article-title,
 .articles .article .article-title a {
   color: var(--fore);
@@ -59,19 +61,23 @@ main {
   font-size: 1.4rem;
   line-height: 130%;
 }
+
 .articles .article:hover {
   transform: scale(1.05);
 }
+
 .articles .article .date {
   display: block;
   font-size: 0.8rem;
 }
+
 .articles .article .categories {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+
 .articles .article .categories .category {
   margin: 0 0.5rem 0.3rem 0;
   display: block;
@@ -83,51 +89,41 @@ main {
   line-height: 1.3rem;
   cursor: pointer;
 }
-/* media query */
 
-@media screen and (max-width: 750px) {
-  body {
-    padding: 1.5rem;
-  }
+@media screen and (max-width: 760px) {
   header .site-title {
     font-size: 3rem;
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 480px) {
   header .site-title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
+
   .articles {
     row-gap: 1.2rem;
   }
 }
 
-@media screen and (max-width: 350px) {
-  #img-wrapper img {
-    max-width: 50px;
-  }
-  #bio {
+@media screen and (max-width: 320px) {
+  .author {
     align-items: flex-start;
   }
-  main,
-  .articles {
-    padding: 0;
-    margin: 0;
+
+  .author-avatar img {
+    max-width: 50px;
   }
-  main {
-    padding-bottom: 1rem;
-  }
+
   .articles {
     margin: 2rem 0 3rem 0;
     row-gap: 1.2rem;
   }
-  header .site-title {
-    font-size: 2.4rem;
-  }
-  .article {
+
+  .articles .article {
     padding: 1.2rem;
   }
+
   .articles .article .article-title,
   .articles .article .article-title a {
     font-size: 1rem;

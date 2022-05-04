@@ -1,10 +1,10 @@
-<section id="bio">
-  <section id="img-wrapper">
+<section class="author">
+  <section class="author-avatar">
     <img src="{{site.data.author.dp}}" alt="{{site.data.author.name}}" />
   </section>
-  <section id="bio-wrapper">
-    <div id="text-wrapper">{{site.data.author.description}}</div>
-    <div id="social-wrapper">
+  <section class="author-info">
+    <div class="author-description">{{site.data.author.description}}</div>
+    <div class="author-contact">
       {% for i in site.data.author.contact %}
       <a href="{{i.url}}" class="icon icon-{{i.title}} dabbah" style="color: {{i.color}};{% unless i.bgcolor == "" %} background-color: {{i.bgcolor}};{% endunless %}" target="_blank"></a>
       {%endfor%}
