@@ -3,8 +3,8 @@ title: "Test Güdümlü Geliştirme (Test-Driven Development) Nedir?"
 date: 2019-07-05 11:51:00 +0300
 layout: post
 permalink: /yazilim/tasarim/test-gudumlu-gelistirme-test-driven-development-nedir
-categories: [ "Yazılım", "Tasarım", "Extreme Programming" ]
-tags: [ "Ne", "Ne demek", "Nedir", "Nesne Yönelimli Programlama", "Object-Oriented Programming", "OOP", "TDD", "Test Driven Design", "Test Driven Development", "Test Güdümlü Geliştirme", "Test Güdümlü Tasarım", "Unit Test" ]
+categories: [ "Yazılım", "Tasarım" ]
+tags: [ "Ne", "Ne demek", "Nedir", "Extreme Programming", "Nesne Yönelimli Programlama", "Object-Oriented Programming", "OOP", "TDD", "Test Driven Design", "Test Driven Development", "Test Güdümlü Geliştirme", "Test Güdümlü Tasarım", "Unit Test" ]
 published: true
 ---
 

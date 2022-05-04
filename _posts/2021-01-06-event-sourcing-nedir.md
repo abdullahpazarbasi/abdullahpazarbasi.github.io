@@ -3,8 +3,8 @@ title: "Event Sourcing Nedir?"
 date: 2021-01-06 10:36:35 +0300
 layout: post
 permalink: /yazilim/tasarim/event-sourcing-nedir
-categories: [ "Yazılım", "Tasarım", "Architectural Tasarım Kalıpları", "Tasarım Kalıpları", "Veritabanı", "Yazılım Kavramları Sözlüğü" ]
-tags: [ "Command Model", "Consistency", "CQRS", "CQS", "Event", "Event Sourcing", "Eventual Consistency", "Immutablity", "Projection", "Query Model" ]
+categories: [ "Yazılım", "Tasarım" ]
+tags: [ "Command Model", "Architectural Tasarım Kalıpları", "Tasarım Kalıpları", "Veritabanı", "Yazılım Kavramları Sözlüğü", "Consistency", "CQRS", "CQS", "Event", "Event Sourcing", "Eventual Consistency", "Immutablity", "Projection", "Query Model" ]
 published: true
 ---
 

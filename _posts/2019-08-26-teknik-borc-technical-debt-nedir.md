@@ -3,8 +3,8 @@ title: "Teknik Borç (Technical Debt) Nedir?"
 date: 2019-08-26 17:02:46 +0300
 layout: post
 permalink: /yazilim/tasarim/teknik-borc-technical-debt-nedir
-categories: [ "Yazılım", "Tasarım", "Extreme Programming", "Mimari" ]
-tags: [ "Technical Debt", "Teknik Borç" ]
+categories: [ "Yazılım", "Tasarım" ]
+tags: [ "Technical Debt", "Teknik Borç", "Extreme Programming", "Mimari" ]
 published: true
 ---
 

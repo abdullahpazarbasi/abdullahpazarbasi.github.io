@@ -3,8 +3,8 @@ title: "Test İkizleri (Test Doubles)"
 date: 2021-12-22 14:45:53 +0300
 layout: post
 permalink: /yazilim/tasarim/test-ikizleri-test-doubles
-categories: [ "Yazılım", "Tasarım", "Test" ]
-tags: [ ]
+categories: [ "Yazılım", "Tasarım" ]
+tags: [ "Test" ]
 published: true
 ---
 

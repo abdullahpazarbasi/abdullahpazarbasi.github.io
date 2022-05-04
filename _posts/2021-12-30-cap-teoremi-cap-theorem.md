@@ -3,8 +3,8 @@ title: "CAP Teoremi (CAP Theorem)"
 date: 2021-12-30 21:12:44 +0300
 layout: post
 permalink: /yazilim/mimari/cap-teoremi-cap-theorem
-categories: [ "Yazılım", "Mimari", "Veritabanı" ]
-tags: [ ]
+categories: [ "Yazılım", "Mimari" ]
+tags: [ "Veritabanı" ]
 published: true
 ---
 

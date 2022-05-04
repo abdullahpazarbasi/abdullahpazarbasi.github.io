@@ -142,13 +142,17 @@ header .site-title {
 }
 
 .content pre {
-  background-color: var(--back) !important;
   padding: 1rem 2rem;
   margin-bottom: 1.75rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12pt;
+  background-color: var(--back) !important;
 }
 
 .content code {
   padding: 3px 5px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12pt;
   color: var(--fore);
   white-space: pre;
   background-color: var(--back);

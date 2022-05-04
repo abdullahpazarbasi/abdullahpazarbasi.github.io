@@ -3,8 +3,8 @@ title: "Bourne Shell Command &#038; Script Interpreter Cheatsheet"
 date: 2022-02-14 00:16:35 +0300
 layout: post
 permalink: /platformlar/isletim-sistemleri/unix/bourne-shell-command-script-interpreter-cheatsheet
-categories: [ "Betik İşleme", "Operating System", "Bourne Shell", "İşletim Sistemleri", "Linux", "macOS", "UNIX" ]
-tags: [ ]
+categories: [ "Platformlar", "İşletim Sistemleri", "UNIX" ]
+tags: [ "Betik İşleme", "Operating System", "Bourne Shell", "Linux", "macOS" ]
 published: true
 ---
 

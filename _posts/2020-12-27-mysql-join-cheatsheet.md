@@ -3,8 +3,8 @@ title: "MySQL JOIN Cheatsheet"
 date: 2020-12-27 19:05:49 +0300
 layout: post
 permalink: /platformlar/veritabani/mysql-join-cheatsheet
-categories: [ "Platformlar", "Veritabanı", "Database" ]
-tags: [ "INNER JOIN", "JOIN", "LEFT JOIN", "MySQL", "OUTER JOIN", "RIGHT JOIN" ]
+categories: [ "Platformlar", "Veritabanı" ]
+tags: [ "INNER JOIN", "JOIN", "LEFT JOIN", "MySQL", "OUTER JOIN", "RIGHT JOIN", "Database" ]
 published: true
 ---
 

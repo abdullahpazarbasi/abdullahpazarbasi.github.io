@@ -4,7 +4,7 @@ date: 2021-04-04 23:57:22 +03:00
 layout: post
 permalink: /platformlar/programlama/golang/go-cheatsheet
 categories: [ "Platformlar", "Programlama", "Golang" ]
-tags: [ ]
+tags: [ "Cheatsheet" ]
 published: true
 ---
 
