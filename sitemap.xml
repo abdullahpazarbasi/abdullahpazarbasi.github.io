@@ -7,7 +7,7 @@ layout: null
   {% for post in site.posts %}
   {% if post.published %}
   <url>
-    <loc>{{ site.url }}{{ post.url }}</loc>
+    <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
     {% if post.last_modified_at %}
     <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
     {% elsif post.date %}
@@ -31,7 +31,7 @@ layout: null
   {% for page in site.pages %}
   {% if page.exclusion_from_sitemap == false %}
   <url>
-    <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
+    <loc>{{ page.url | remove: "index.html" | prepend: site.baseurl | prepend: site.url }}</loc>
     {% if page.last_modified_at %}
     <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
     {% elsif page.date %}

@@ -4,7 +4,7 @@ date: 2021-12-22 14:45:53 +0300
 layout: post
 permalink: /yazilim/tasarim/test-ikizleri-test-doubles
 categories: [ "Yazılım", "Tasarım" ]
-tags: [ "Test" ]
+tags: [ "Test", "Kukla", "Dummy", "Uydurma", "Fake", "Maket", "Stub", "Casus", "Spy", "Taklit", "Mock", "İkiz", "Double" ]
 published: true
 ---
 

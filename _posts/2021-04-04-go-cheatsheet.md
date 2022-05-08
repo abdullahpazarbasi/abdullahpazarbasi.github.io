@@ -4,7 +4,7 @@ date: 2021-04-04 23:57:22 +03:00
 layout: post
 permalink: /platformlar/programlama/golang/go-cheatsheet
 categories: [ "Platformlar", "Programlama", "Golang" ]
-tags: [ "Cheatsheet" ]
+tags: [ "Cheatsheet", "Go", "Golang", "Test" ]
 published: true
 ---
 
@@ -131,6 +131,7 @@ import (
 	"os"
 	"fmt"
 	"mymodule/mypack"
+
 	"github.com/example/examplepack"
 )
 ```
@@ -1355,8 +1356,9 @@ Test dosyalarının adlarının sonunun `_test.go` ile bitirilmesi önerilir:
 package demo
 
 import (
-	"github.com/stretchr/testify/assert" // İddia için gereken bir paket
 	"testing" // Unit test için gereken paket
+
+	"github.com/stretchr/testify/assert" // İddia için gereken bir paket
 )
 
 func TestMyFunction(t *testing.T) { // Test fonksiyonunun adı "Test" ile başlar
@@ -1389,7 +1391,7 @@ type AbcService interface {
 Taklit jeneratörünü bu dosya için çalıştıralım:
 
 ```shell
-mockgen -source=abc/service.go -package=abc_mock -destination=abc/mock/service_mock.go
+mockgen -source=abc/service.go -package=abcmock -destination=abc/mock/service_mock.go
 ```
 
 #### Taklit Kullanım Örneği (Mock Usage)
@@ -1398,22 +1400,23 @@ mockgen -source=abc/service.go -package=abc_mock -destination=abc/mock/service_m
 package abc
 
 import (
-	abc_mock "example.com/myspace/abc/mock"
 	"fmt"
+	"testing"
+
+	abcmock "example.com/myspace/abc/mock"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func TestAbcService(t *testing.T) {
 	mockController := gomock.NewController(t) // Mock controller ayarlar
 	defer mockController.Finish() // Mock controller sonlandırır
 
-	mockAbcService := abc_mock.NewMockService(mockController) // mockgen ile oluşturulan taklit servis
+	mockAbcService := abcmock.NewMockService(mockController) // mockgen ile oluşturulan taklit servis
 	mockAbcService.
 		EXPECT(). // Beklenen,
-		Serve(gomock.Any()). // 'Serve' herhangi bir girdi ile çağrıldığında
-		Times(1). // 1 kereliğine
+		Serve(gomock.Any()). // 'Serve' herhangi bir girdi ile
+		Times(1). // 1 kereliğine çağrıldığında
 		Return("OK") // "OK" dönmesi
 
 	var err error

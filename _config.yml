@@ -77,7 +77,7 @@ skip_initial_build: false # Skips the initial site build which occurs before the
 show_dir_listing: false # Show a directory listing instead of loading your index file
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://abdullahpazarbasi.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Outputting
 paginate: 5

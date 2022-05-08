@@ -4,7 +4,7 @@ date: 2022-04-05 13:34:07 +0300
 layout: post
 permalink: /yazilim/tasarim/error-defect-bug-fault-failure
 categories: [ "Yazılım", "Tasarım" ]
-tags: [ "Error", "Fault", "Defect", "Bug", "Failure", "Extreme Programming" ]
+tags: [ "Error", "Mistake", "Fault", "Defect", "Bug", "Failure", "Extreme Programming", "Wrong", "Missing", "Extra" ]
 published: true
 ---
 
