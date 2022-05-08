@@ -13,7 +13,15 @@ source "https://rubygems.org"
 gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+  gem "jekyll-coffeescript"
+  gem "jekyll-default-layout"
+  gem "jekyll-gist"
+  gem "jekyll-github-metadata"
+  gem "jekyll-optional-front-matter"
   gem "jekyll-paginate"
+  gem "jekyll-readme-index"
+  gem "jekyll-titles-from-headings"
+  gem "jekyll-relative-links"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -29,3 +37,6 @@ end
 # Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
+
+# CSS for syntax highlighting
+# rougify style base16.dark > assets/css/syntax.css

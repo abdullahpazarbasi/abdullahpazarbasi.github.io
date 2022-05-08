@@ -25,7 +25,7 @@ data_dir: _data
 includes_dir: _includes
 sass:
   sass_dir: _sass
-safe: false # Disable non-whitelisted plugins, caching to disk, and ignore symbolic links
+safe: true # Disable non-whitelisted plugins, caching to disk, and ignore symbolic links
 disable_disk_cache: false
 ignore_theme_config: true
 include: [ ".htaccess" ]
@@ -61,6 +61,8 @@ highlighter: rouge
 lsi: false # Produce an index for related posts (requires the classifier-reborn plugin)
 excerpt_separator: "<!-- more -->"
 incremental: false # experimental
+gist:
+  noscript: false
 
 # Serving
 host: 127.0.0.1
@@ -139,6 +141,8 @@ kramdown:
   input: GFM
   hard_wrap: false
   footnote_nr: 1
+  math_engine: mathjax
+  syntax_highlighter: rouge
 
 title: Abdullah Pazarbaşı
 author:

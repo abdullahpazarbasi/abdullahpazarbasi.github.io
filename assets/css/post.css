@@ -134,28 +134,31 @@ header .site-title {
 }
 
 /* pre , code */
-.content,
-.content div,
-.content div pre,
-.content div pre code {
+.content pre,
+.content pre code {
   overflow-x: auto !important;
 }
 
 .content pre {
-  padding: 1rem 2rem;
-  margin-bottom: 1.75rem;
+  padding: 1rem;
   font-family: "JetBrains Mono", monospace;
   font-size: 12pt;
-  background-color: var(--back) !important;
 }
 
 .content code {
-  padding: 3px 5px;
+  white-space: pre;
   font-family: "JetBrains Mono", monospace;
   font-size: 12pt;
   color: var(--fore);
-  white-space: pre;
+}
+
+.content :not(.highlight) > code {
+  padding: 3px 5px;
   background-color: var(--back);
+}
+
+.content .highlighter-rouge {
+  margin-bottom: 2rem;
 }
 
 /* categories */
