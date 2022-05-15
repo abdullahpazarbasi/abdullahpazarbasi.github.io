@@ -46,8 +46,28 @@ main {
   max-width: 750px;
 }
 
+hr {
+  border-top: 2px dashed var(--line) !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  margin-bottom: 1.75rem !important;
+}
+
+a {
+  color: var(--link);
+}
+
 footer p {
   font-size: 0.8rem;
+}
+
+.icon {
+  font-size: 0.8rem;
+}
+
+footer p .icon {
+  font-size: 0.618rem;
 }
 
 /* back to top */
@@ -187,14 +207,6 @@ body {
   background-color: var(--light);
 }
 
-hr {
-  border-top: 2px dashed var(--line) !important;
-  border-bottom: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  margin-bottom: 1.75rem !important;
-}
-
 /* pagination */
 
 .pagination {
@@ -203,7 +215,6 @@ hr {
 
 .pagination a {
   padding: 0 0.25em;
-  color: var(--link);
 }
 
 .pagination span {

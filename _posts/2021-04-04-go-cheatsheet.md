@@ -20,12 +20,11 @@ published: true
 - Dolayısıyla `class` yok
 - `Struct` ve `method` var
 - `Interface` var
-- Type seviyesinde encapsulation yok
-- `Encapsulation` paket seviyesinde
+- Paket seviyesinde `encapsulation` var
 - Kalıtım yok (zaten sınıf da yok) ama tip gömme var
 - Birinci derece yazılım varlığı fonksiyon
 - Fonksiyon, birden fazla değer döndürebilir (aslında bağıntı)
-- `Exception` fırlatma yok
+- `Exception` yok `panic` var
 - İlave return elemanı olarak `error` döndürme var
 - `Closure` var
 - `Pointer` var ama pointer aritmetiği (`unsafe` paketi kullanılmazsa) yok
@@ -1329,6 +1328,11 @@ func GetRootDirectoryPath() string {
 }
 ```
 
+## Geçerli Çalışma Dizini Öğrenme (Current Working Directory - CWD)
+
+```go
+```
+
 ## Basma (Printing)
 
 ```go
@@ -1344,6 +1348,91 @@ welcomeMessages := `Welcome
 Hoşgeldin
 أهلا بك`
 ```
+
+## Tarih-Zaman Düzeni (Datetime Layout, Template, Format)
+
+```go
+var tm time.Time
+
+// ISO 8601
+tm, _ = time.Parse("2006-01-02T15:04:05-07:00", "2022-05-04T08:07:06+03:00")
+fmt.Println(tm.UTC().Format("2006-01-02T15:04:05-07:00")) // 2022-05-04T05:07:06+00:00
+
+// ISO yalnız tarih
+tm, _ = time.Parse("2006-01-02T15:04:05-07:00", "2022-05-04T08:07:06+03:00")
+fmt.Println(tm.UTC().Format("2006-01-02")) // 2022-05-04
+
+// ISO yalnız saat
+tm, _ = time.Parse("2006-01-02T15:04:05-07:00", "2022-05-04T08:07:06+03:00")
+fmt.Println(tm.UTC().Format("15:04:05")) // 05:07:06
+
+// RFC 3339
+tm, _ = time.Parse("2006-01-02T15:04:05Z07:00", "2022-05-04T08:07:06+03:00")
+fmt.Println(tm.UTC().Format(time.RFC3339)) // 2022-05-04T05:07:06Z
+
+// milisaniyeli RFC 3339
+tm, _ = time.Parse("2006-01-02T15:04:05.999Z07:00", "2022-05-04T08:07:06.789+03:00")
+fmt.Println(tm.UTC().Format("2006-01-02T15:04:05.999Z07:00")) // 2022-05-04T05:07:06.789Z
+
+// mikrosaniyeli RFC 3339
+tm, _ = time.Parse("2006-01-02T15:04:05.999999Z07:00", "2022-05-04T08:07:06.456789+03:00")
+fmt.Println(tm.UTC().Format("2006-01-02T15:04:05.999999Z07:00")) // 2022-05-04T05:07:06.456789Z
+
+// nanosaniyeli RFC 3339
+tm, _ = time.Parse("2006-01-02T15:04:05.999999999Z07:00", "2022-05-04T08:07:06.123456789+03:00")
+fmt.Println(tm.UTC().Format(time.RFC3339Nano)) // 2022-05-04T05:07:06.123456789Z
+
+// noktalamasız ISO (karşılaştırılabilir)
+tm, _ = time.Parse("20060102150405", "20220502050706")
+fmt.Println(tm.UTC().Format("20060102150405")) // 20220502050706
+
+// HTTP (RFC 1123 - GMT)
+tm, _ = time.Parse("Mon, 02 Jan 2006 15:04:05 GMT", "Wed, 04 May 2022 05:07:06 GMT")
+fmt.Println(tm.UTC().Format(http.TimeFormat)) // Wed, 04 May 2022 05:07:06 GMT
+
+// RFC 1123
+tm, _ = time.Parse("Mon, 02 Jan 2006 15:04:05 MST", "Wed, 04 May 2022 08:07:06 EEST")
+fmt.Println(tm.UTC().Format(time.RFC1123)) // Wed, 04 May 2022 05:07:06 UTC
+
+// nümerik zaman dilimli RFC 1123
+tm, _ = time.Parse("Mon, 02 Jan 2006 15:04:05 -0700", "Wed, 04 May 2022 08:07:06 +0300")
+fmt.Println(tm.UTC().Format(time.RFC1123Z)) // Wed, 04 May 2022 05:07:06 +0000
+
+// ANSIC
+tm, _ = time.Parse("Mon Jan _2 15:04:05 2006", "Wed May  4 05:07:06 2022")
+fmt.Println(tm.UTC().Format(time.ANSIC)) // Wed May  4 05:07:06 2022
+
+// Unix
+tm, _ = time.Parse("Mon Jan _2 15:04:05 MST 2006", "Wed May  4 08:07:06 EEST 2022")
+fmt.Println(tm.UTC().Format(time.UnixDate)) // Wed May  4 05:07:06 UTC 2022
+
+// RFC 822
+tm, _ = time.Parse("02 Jan 06 15:04 MST", "04 May 22 08:07 EEST")
+fmt.Println(tm.UTC().Format(time.RFC822)) // 04 May 22 05:07 UTC
+
+// nümerik zaman dilimli RFC 822
+tm, _ = time.Parse("02 Jan 06 15:04 -0700", "04 May 22 08:07 +0300")
+fmt.Println(tm.UTC().Format(time.RFC822Z)) // 04 May 22 05:07 +0000
+
+// RFC 850
+tm, _ = time.Parse("Monday, 02-Jan-06 15:04:05 MST", "Wednesday, 04-May-22 08:07:06 EEST")
+fmt.Println(tm.UTC().Format(time.RFC850)) // Wednesday, 04-May-22 05:07:06 UTC
+```
+
+| Dilim         | 1. Seçenek | 2. Seçenek | 3. Seçenek | 4. Seçenek | 5. Seçenek | 6. Seçenek |
+|---------------|------------|------------|------------|------------|------------|------------|
+| Ay            | 01         | 1          | Jan        | January    |            |            |
+| Gün           | 02         | 2          | _2         |            |            |            |
+| Saat          | 03         | 3          | _3         | 15         |            |            |
+| Dakika        | 04         | 4          | _4         |            |            |            |
+| Saniye        | 05         | 5          | _5         |            |            |            |
+| Yıl           | 06         | 2006       |            |            |            |            |
+| Bölge         | -07        | -0700      | -07:00     | Z0700      | Z07:00     | MST        |
+| Milisaniye    | .000       | .999       |            |            |            |            |
+| Mikrosaniye   | .000000    | .999999    |            |            |            |            |
+| Nanosaniye    | .000000000 | .999999999 |            |            |            |            |
+| Haftanın günü | Mon        | Monday     |            |            |            |            |
+| Yarı gün      | pm         | PM         |            |            |            |            |
 
 ## Birim Testleri (Unit Testing)
 
