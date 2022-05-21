@@ -161,6 +161,14 @@ import (
 )
 ```
 
+Import edilen paketin takma adı `_` olursa paket kullanılması için değil içindeki tanımlamalar, deklarasyonlar, başlatmalar gerçekleşsin diye yan etkiler gerçekleşsin diye import edilmiş olur:
+
+```go
+import (
+    _ "example.org/myspace/mypackage"
+)
+```
+
 ### Paket İndirme
 
 Paket indirmek için komut satırından:
@@ -477,6 +485,8 @@ abc.C = 6 // {4 2 6} şeklinde
 b := abc.B // b -> 2
 ```
 
+> `struct member` = `field`
+
 ## Arayüzler (Interface)
 
 ### Arayüz Deklarasyonu (Interface Declaration)
@@ -489,6 +499,10 @@ type Producer interface {
 ```
 
 > Somut tiplerin hangi `interface` ‘i gerçekleyeceği deklare edilmez.
+
+### Dinamik Tip (Dynamic Types)
+
+...
 
 ## Değişken Deklarasyonu (Variable Declaration)
 
@@ -767,6 +781,17 @@ for range time.Tick(time.Second) { // Hiçbir değişken lazım olmayabilir de..
 }
 ```
 
+### İterasyonda Elemanı Kaynağından Kullanmak
+
+```go
+for idx := range array_or_slice { // Yalnız endeks lazım
+    element := &array_or_slice[idx]
+	fmt.Println("%v", element)
+}
+```
+
+> Kaynağından kullanım tasarruf sağlar
+
 ## Tikleyici (Ticker)
 
 ```go
@@ -853,6 +878,10 @@ fmt.Println(increase()) // 1
 fmt.Println(increase()) // 2
 fmt.Println(increase()) // 3
 ```
+
+### Lexical Scope
+
+...
 
 ### Varyadik Fonksiyonlar (Variadic Functions)
 
@@ -1035,6 +1064,12 @@ func main() {
 	}
 }
 ```
+
+## Panic
+
+### Panic Ele Alımı (Panic Recovery)
+
+...
 
 > Hata mesajlarının küçük harflerle yazılması ve hata mesajlarının sonuna nokta <span style="text-decoration: underline;">konulmaması</span> teamüldür ve tavsiye edilir
 
@@ -1330,10 +1365,11 @@ func GetRootDirectoryPath() string {
 
 ## Geçerli Çalışma Dizini Öğrenme (Current Working Directory - CWD)
 
-```go
-```
+...
 
-## Basma (Printing)
+## Formatlama (Formatting)
+
+### Basma (Printing)
 
 ```go
 fmt.Println("Welcome\nHoşgeldin\nأهلا بك"); // String 'i stdout 'a yazar ve bir de yeni satır ekler
@@ -1349,7 +1385,19 @@ Hoşgeldin
 أهلا بك`
 ```
 
-## Tarih-Zaman Düzeni (Datetime Layout, Template, Format)
+### `Stringer` Arayüzü
+
+...
+
+### `Formatter` Arayüzü
+
+...
+
+### Düzenli İfadeler (Regular Expressions - RegEx - RegExp)
+
+[Sentaks](https://github.com/google/re2/wiki/Syntax)
+
+### Tarih-Zaman Düzeni (Datetime Layout, Template, Format)
 
 ```go
 var tm time.Time
@@ -1434,6 +1482,22 @@ fmt.Println(tm.UTC().Format(time.RFC850)) // Wednesday, 04-May-22 05:07:06 UTC
 | Haftanın günü | Mon        | Monday     |            |            |            |            |
 | Yarı gün      | pm         | PM         |            |            |            |            |
 
+## Jenerik (Type Parameters - Generics)
+
+...
+
+## Tipin Arayüzü (Interface of Type)
+
+...
+
+## Çalışma Alanı (Workspaces)
+
+...
+
+## Bağlam Kullanımı (Context Usage)
+
+...
+
 ## Birim Testleri (Unit Testing)
 
 ### Test Fonksiyonu
@@ -1514,6 +1578,10 @@ func TestAbcService(t *testing.T) {
 	assert.Nil(t, err) // Çalıştırma sonucunda hata yok iddiası
 }
 ```
+
+### Fuzzing Test
+
+...
 
 ### Birim Testleri Koşturma
 
