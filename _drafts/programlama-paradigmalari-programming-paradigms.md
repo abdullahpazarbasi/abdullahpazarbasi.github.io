@@ -1,15 +1,11 @@
 ---
-id: 919
-title: 'Programlama Paradigmaları (Programming Paradigms)'
-date: '2020-12-18T10:39:10+03:00'
-author: 'Abdullah Pazarbaşı'
+title: "Programlama Paradigmaları (Programming Paradigms)"
+date: 2020-12-18 10:39:10 +0300
 layout: post
-guid: 'http://www.abdullahpazarbasi.com/?p=919'
-permalink: '/?p=919'
-primer_layout:
-    - one-column-wide
-categories:
-    - Tasarım
+permalink: /yazilim/programlama-paradigmalari-programming-paradigms
+categories: [ "Yazılım" ]
+tags: [ ]
+published: false
 ---
 
 ## Emperatif – Emirsel (Imperative)

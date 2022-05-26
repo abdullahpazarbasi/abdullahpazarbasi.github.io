@@ -1,21 +1,14 @@
 ---
-id: 860
-title: 'PHP 8 Yenilikleri'
-date: '2021-07-22T17:11:40+03:00'
-author: 'Abdullah Pazarbaşı'
+title: "PHP 8 Yenilikleri"
+date: 2021-07-22 17:11:40 +03:00
 layout: post
-guid: 'http://www.abdullahpazarbasi.com/?p=860'
-permalink: '/?p=860'
-primer_layout:
-    - one-column-wide
-categories:
-    - PHP
-tags:
-    - PHP
-    - PHP8
+permalink: /yazilim/platformlar/php/php-8-yenilikleri
+categories: [ "Yazılım", "Platformlar", "PHP" ]
+tags: [ "PHP", "PHP8" ]
+published: false
 ---
 
-PHP’nin yeni majör sürümü 2020 sonuna doğru stable haliyle sürülecek plana göre. PHP 8 ‘in çıkışı en fazla benim gibi strict declaration yeğleyen geliştiricileri heyecanlandırıyor. Bu sürümle en çok amaçlanan da kodlama esnasındaki belirsizlikleri en aza indirmeye yardımcı olmak diye düşünüyorum. Paslama ve çıktı döndürmede kontrol dışı meseleler kalmamasını sağlayacak devrim mesabesinde yenilikler barındırıyor PHP 8.
+PHP 'nin yeni majör sürümü 2020 sonuna doğru stable haliyle sürülecek plana göre. PHP 8 'in çıkışı en fazla benim gibi strict declaration yeğleyen geliştiricileri heyecanlandırıyor. Bu sürümle en çok amaçlanan da kodlama esnasındaki belirsizlikleri en aza indirmeye yardımcı olmak diye düşünüyorum. Paslama ve çıktı döndürmede kontrol dışı meseleler kalmamasını sağlayacak devrim mesabesinde yenilikler barındırıyor PHP 8.
 
 ## PHP 8 ile Gelen Yenilikler Neler?
 
