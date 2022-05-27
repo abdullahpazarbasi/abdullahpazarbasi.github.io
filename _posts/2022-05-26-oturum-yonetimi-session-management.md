@@ -8,8 +8,6 @@ tags: [ "Mimari", "Oturum", "Session", "Sticky", "Affinity", "Load Balancer", "Y
 published: true
 ---
 
-# Oturum Yönetimi (Session Management)
-
 ## Oturum Nedir? (What is Session?)
 
 İstemciye veya istemciyi kullanana has bir takım `on-demand` ve kalıcı olmayan verinin <u>geçici</u> olarak saklanması gerekir. Bu tür verilere örnek olarak kimliklendirme jetonları, yetkilendirme anahtarları, kullanıcının aldığı son aksiyonlar listesi, alışveriş sepeti, imzalanmış formlar (`CSRF` 'e karşı), kişiselleştirmeye yarayan bilgiler sayılabilir. Her tekil istemcinin sunucu <u>tarafında</u> oluşturabildiği kendine has `state` oturumdur (session 'dır). Buna bir anahtar üzerinden erişilir. İstemci bu anahtarı kaybetse oturumuna erişemeyeceğinden dolayı oturumunu da kaybetmiş olur.
