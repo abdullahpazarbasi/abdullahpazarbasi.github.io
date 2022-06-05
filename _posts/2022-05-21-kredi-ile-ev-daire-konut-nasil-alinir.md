@@ -8,8 +8,6 @@ tags: [ "daire", "ev", "emlak", "bankadan", "konut", "kredili" ]
 published: false
 ---
 
-# Kredi ile Daire Nasıl Alınır?
-
 Konut alımında kredi nasıl kullanılır? Konut kredisine nasıl başvurulur? gibi sorulara cevap olabilecek tecrübedir.
 
 Olaylar işçi olan alıcı ile, esnaf olan satıcı, bankacı, emlakçı, alıcının çalıştığı firmanın İK elemanı ve tapu müdürlüğü memurları arasında 2022'nin Mayıs ayında geçmiştir:
