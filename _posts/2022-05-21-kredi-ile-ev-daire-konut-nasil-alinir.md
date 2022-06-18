@@ -4,21 +4,21 @@ date: 2022-05-21 10:34:49 +0300
 layout: post
 permalink: /tecrubeler/kredi-ile-ev-daire-konut-nasil-alinir
 categories: [ "tecrubeler" ]
-tags: [ "daire", "ev", "emlak", "bankadan", "konut", "kredili" ]
-published: false
+tags: [ "daire", "ev", "emlak", "bankadan", "konut", "kredi", "kredili", "gayrimenkul", "tapu" ]
+published: true
 ---
 
-Konut alımında kredi nasıl kullanılır? Konut kredisine nasıl başvurulur? gibi sorulara cevap olabilecek tecrübedir.
+Konut alımında kredi nasıl kullanılır? Konut kredisine nasıl başvurulur? Kredili konut alımı nasıl gerçekleşir? Kredili konut alırken nelere dikkat edilmelidir? gibi sorulara cevap olabilecek tecrübedir.
 
 Olaylar işçi olan alıcı ile, esnaf olan satıcı, bankacı, emlakçı, alıcının çalıştığı firmanın İK elemanı ve tapu müdürlüğü memurları arasında 2022'nin Mayıs ayında geçmiştir:
 
 - Önce aday mülklerin bulunduğu muhit seçildi.
 - Kredinin %80 seviyesinde çıkabilmesi için azami 10 yaşında olan binalardaki daireler gezildi. %75'e de hazır olunması gerektiği bilinmeli. Zira banka kredi oranını düşürmese de eksperin bildireceği azami değer beklentiden düşük olabilir.
-- Daire beğenildi. Emlakçı alıcı ile satıcıyı buluşturdu ve satıcıya, anlaşma sağlanırsa dairenin kredi ile alınacağı bildirildi.
+- Daire beğenildi. Emlakçı, alıcı ile satıcıyı buluşturdu ve satıcıya, anlaşma sağlanırsa dairenin kredi ile alınacağı bildirildi.
 - Satıcı ile pazarlığa oturuldu ve fiyat üzerinde anlaşıldıktan sonra kapora verildi. Kapora transferinin nakit olması tercih edildi.
 - "Emlak Satış Ön Sözleşmesi" başlığıya bir sözleşme imzalanarak anlaşma yazıya döküldü.
-- Alıcı, emlakçı ile de hizmeti karşılığı ücreti hususunda anlaştı.
-- Alıcı bankasını seçti. Seçilen banka, en ücra kasabalarda bile şubesi bulunabilen bir devlet bankası. Anladınız siz onu, isim vermiyorum.
+- Alıcı, hizmeti karşılığı ücreti hususunda emlakçı ile de anlaştı.
+- Alıcı bankasını seçti. Seçilen banka, en ücra kasabalarda bile şubesi bulunabilen bir devlet bankası. İsim vermiyorum, anladınız siz o bankanın hangi banka olduğunu.
 - Alıcı, seçtiği bankanın kendisine en yakın olan şubesine bizzat gidip konut kredisi için gereken belgeleri öğrendi. O şubede daha önceden açılmış hesabı bulunduğu için doğrudan kendi temsilcisi ile muhatap oldu.
 - Konut kredisi başvurusu için gereken belgeler: son 3 ayın kaşeli ve imzalı ücret bordrosu, firmanın imza sirküleri, e-devlet üzerinden edinilecek uzun dönem ve barkodlu 4A Hizmet Dökümü, satın alınacak dairenin tapu senedi fotoğrafı veya dijital taraması veya fotokopisi ve eğer tapu senedinde yazmıyorsa webtapu üzerinden öğrenilebilecek, taşınmaz kimlik numarası (arsanın değil bağımsız bölümün numarası olmasına dikkat edilmeli)
 - Alıcı, kredi ön onayı haberi gelince 2 gün içinde gereken belgeleri elde edip banka şubesine başvuru için yine bizzat gitti. Dairenin fiyatını, talep edilen krediyi (%80'den hesaplayarak), istediği vadeyi ve aylık gelirini beyan etti. Ayrıca eksperin muhatap olacağı kişinin yani emlakçının adını ve iletişim bilgilerini de bildirdi.
@@ -52,5 +52,7 @@ Olaylar işçi olan alıcı ile, esnaf olan satıcı, bankacı, emlakçı, alıc
 - Yaklaşık yarım saat içinde bankacıdan transfer dekontu geldi.
 - Kat maliki, eski kat malikine sordu. Kredi tutarının da eski kat malikinin hesabına geçmiş olduğu öğrenildi.
 - Kat maliki, emlakçıya hizmeti karşılığı ücretini de ödedi.
-- Kat malikinin belediyeye 3 ay içinde emlak beyanı vermesi gerekiyor.
-- Kat malikinin, elektrik, su, doğalgaz aboneliklerini üzerine alması gerekiyor.
+- Kat malikinin belediyeye 3 ay içinde emlak beyanı vermesi gerekiyor. Kat maliki, gayrimenkulün bağlı olduğu belediyenin emlak servisine gitti. Tapu senedi ve vatandaşlık kimlik kartını ibraz ederek emlak beyanını gerçekleştirdi.
+- Kat maliki, elektrik, su ve doğalgaz aboneliklerini de üzerine almayı unutmamalıdır. 3 abonelikte de DASK poliçesi istenebilir.
+
+Bu kadar...
