@@ -20,7 +20,9 @@ published: false
 
 ### Tahlil (Analysing)
 
-Tahlil aşamasında, müşteri veya paydaşlar dinlenir. Dinlenilenler sistematik olarak kayıt altına alınır. A-B testler analiz... Crash raporlarına bakılır... Olacaksa entegrasyon noktalarındaki muhtemel kontratlar incelenir ve gerekiyorsa kendilerine entegre olunacak sistemlerin vaadleri, davranışları ve potansiyelleri irdelenir. Fizibilite çalışmaları yapılır. Kabataslak akış diyagramları, kabataslak bağımlılık diyagramları ve kabataslak kullanıcı arayüzleri (mock arayüzler) çizilir veya varsa önceki döngüden kalanlar üzerinde değişiklikler yapılır. Hatta bu çizilenler üzerinden görüşmek sağlıklı olur. Bu aşamanın sonunda tüm gereksinimler (idealde) netleşmiş olmalı ve icab eden anlaşmalar imzalanmış olmalıdır.
+Tahlil aşamasında,
+
+- Müşteri veya paydaşlar dinlenir. Dinlenilenler sistematik olarak kayıt altına alınır. A-B testler analiz... Crash raporlarına bakılır... Olacaksa entegrasyon noktalarındaki muhtemel kontratlar incelenir ve gerekiyorsa kendilerine entegre olunacak sistemlerin vaadleri, davranışları ve potansiyelleri irdelenir. Fizibilite çalışmaları yapılır. Kabataslak akış diyagramları, kabataslak bağımlılık diyagramları ve kabataslak kullanıcı arayüzleri (mock arayüzler) çizilir veya varsa önceki döngüden kalanlar üzerinde değişiklikler yapılır. Hatta bu çizilenler üzerinden görüşmek sağlıklı olur. Bu aşamanın sonunda tüm gereksinimler (idealde) netleşmiş olmalı ve icab eden anlaşmalar imzalanmış olmalıdır.
 
 ### Tarif (Defining)
 
@@ -28,7 +30,7 @@ Tahlil aşamasında, müşteri veya paydaşlar dinlenir. Dinlenilenler sistemati
 
 ### Tasarım (Designing)
 
-Önceki aşamanın çıktıları olan tanımlamalar üzerinden ve plan doğrultusunda özellik, yetenek, davranışlar tam dozunda soyutlamadan geçirilir. Kullanıcı deneyimleri tasarımları son halini alır. Sistem mimarisi ve bağlı olarak uygulama mimarisi belirlenir veya yenilenir. Konsept sağlamaları (proof of concept - POC) yapılır. Modül haritası oluşturulur veya yenilenir. Kullanılacak tasarım kalıpları/desenleri haritlara ve diyagramlara katılır. Varsa mevcut arayüzlere uyumlu yeni veya yenilenmiş, yoksa yepyeni arayüzler (uygulama programlama arayüzleri, komut satırı arayüzleri veya grafik kullanıcı arayüzleri olsun farketmez...) tasarlanır. Bunlar aktif soyutlamalardır. Kullanıcı deneyimlerine bağlı olarak grafik kullanıcı arayüzlerinin durağan görselleri tasarlanarak son halini alır. Özellik, alan veya veri modellemeleri tasarlanır. Bunlar da pasif soyutlamalardır. Pasif soyutlamalar ikiye ayrılır. Saklamaya yönelik pasif varlıkları (veri tipi, veri yapısı, nesne gibi...) modelleme statik modelleme olarak anılır. Akışa hizmet eden pasif varlıkları (olay (event), durum (state), öbek (heap), kuyruk (queue), yığın (stack), politika (policy) gibi...) modelleme dinamik modelleme olarak adlandırılır. Tasarım aşamasının sonunda çözülmesi gereken problemlerin "nasıl" çözüleceği netleşir. CI/CD kullanılacaksa pipeline'lar bu aşamada oluşturulur.
+Önceki aşamanın çıktıları olan tanımlamalar üzerinden ve plan doğrultusunda özellik, yetenek, davranışlar tam dozunda soyutlamadan geçirilir. Kullanıcı deneyimleri tasarımları son halini alır. Sistem mimarisi ve bağlı olarak uygulama mimarisi belirlenir veya yenilenir. Konsept sağlamaları (proof of concept - POC) yapılır. Modül haritası oluşturulur veya yenilenir. Hazır modüllere bağımlılıklar. Kullanılacak tasarım kalıpları/desenleri haritlara ve diyagramlara katılır. Varsa mevcut arayüzlere uyumlu yeni veya yenilenmiş, yoksa yepyeni arayüzler (uygulama programlama arayüzleri, komut satırı arayüzleri veya grafik kullanıcı arayüzleri olsun farketmez...) tasarlanır. Bunlar aktif soyutlamalardır. Kullanıcı deneyimlerine bağlı olarak grafik kullanıcı arayüzlerinin durağan görselleri tasarlanarak son halini alır. Özellik, alan veya veri modellemeleri tasarlanır. Bunlar da pasif soyutlamalardır. Pasif soyutlamalar ikiye ayrılır. Saklamaya yönelik pasif varlıkları (veri tipi, veri yapısı, nesne gibi...) modelleme statik modelleme olarak anılır. Akışa hizmet eden pasif varlıkları (olay (event), durum (state), öbek (heap), kuyruk (queue), yığın (stack), politika (policy) gibi...) modelleme dinamik modelleme olarak adlandırılır. Tasarım aşamasının sonunda çözülmesi gereken problemlerin "nasıl" çözüleceği netleşir. CI/CD kullanılacaksa pipeline'lar bu aşamada oluşturulur.
 
 ### Tatbik (Implementing)
 
@@ -65,7 +67,7 @@ Fonksiyonel testler (functional tests) çoğunlukla 3T (3A) esasına göre kurgu
 
 #### İşlevsel Olmayan Sınamalar (Non-Functional Testings)
 
-Kriterleri, kalite güvence uzmanları ve sistem güvenlik uzmanlarının tavsiyeleri uyarınca belirlenen, insan müdahalesi ile de başlatılan ama çoğu pipeline 'lara dahil edilebilecek, sistemin işlevsellik davranışları ile ilgili olmayan sınamalardır.
+Kriterleri, kalite güvence uzmanları ve sistem güvenlik uzmanlarının tavsiyeleri uyarınca belirlenen, insan müdahalesi ile de başlatılan ama çoğu, pipeline 'lara dahil edilebilecek, sistemin işlevsellik davranışları ile ilgili olmayan sınamalardır.
 
 ##### İşlevsel Olmayan Test Türlerinden Bazıları
 
@@ -80,7 +82,9 @@ Kriterleri, kalite güvence uzmanları ve sistem güvenlik uzmanlarının tavsiy
 
 #### Versiyonlama ve Çıkma (Versioning and Release)
 
-...
+- Alpha Release
+- Beta Release
+- Official Release
 
 #### Dağıtım (Deployment)
 
@@ -88,10 +92,19 @@ Kriterleri, kalite güvence uzmanları ve sistem güvenlik uzmanlarının tavsiy
 
 #### Kullanıma Açma (Launch)
 
-...
+- Feature Toggling
+- Phased Release
+- Staged Rollout
+
+Stratejiler:
+
+- Soft Launch
+- Dark Launch
+- Canary Release
+- Hard Launch
 
 #### Bakım (Maintenance)
 
 Her projede az ya da çok insan müdahalesine pay olarak bırakılmış işlevsellikler veya insan müdahalesine açık bırakılmış noktalar bulunabilir. Bu müdahaleler icabında müdahaleler veya periyodik müdahaleler olabilir.
 
-Error, fault, defect, bug ve failure tamir (fix) etmek maintenance 'a girmez. Bunlar için ama tam tekmil ama çabuk tarafından olsun yeni bir yazılım geliştirme döngüsüne girilir.
+Error, fault, defect, bug ve failure tamir (fix) etmek maintenance 'a girmez. Bunlar için - ama tam tekmil ama çabuk tarafından olsun - yeni bir yazılım geliştirme döngüsüne girilir.
