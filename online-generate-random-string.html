@@ -1,0 +1,115 @@
+---
+title: "Online Rasgele Katar Üret (Online Generate Random String)"
+date: null
+layout: calculate
+permalink: null
+categories: null
+tags: null
+---
+
+<script>
+    function generateRandomString(alphabet, length) {
+        let result = '';
+        let alphabetLength = alphabet.length;
+        for (let i = 0; i < length; i++) {
+            result += alphabet.charAt(Math.floor(Math.random() * alphabetLength));
+        }
+
+        return result;
+    }
+</script>
+
+<div class="form-group">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="alphabet">Alfabe</label>
+        </div>
+        <input id="alphabet" type="text" class="form-control" placeholder="Karakterler" autocomplete="off" value="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789" />
+    </div>
+    <div class="input-group mt-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="length">Uzunluk</label>
+        </div>
+        <input id="length" type="number" class="form-control" placeholder="Uzunluk" autocomplete="off" value="8" />
+    </div>
+    <button id="generate" type="button" class="form-control mt-3 mb-3 btn btn-primary"><i class="bi-caret-down-fill"></i></button>
+    <div class="input-group">
+        <input id="result" type="text" class="form-control" data-clipboard-target="#result" placeholder="Sonuç" readonly="readonly" />
+        <div class="input-group-append">
+            <button id="copy" type="button" class="form-control btn btn-warning" data-clipboard-target="#result" disabled="disabled"><i class="bi-clipboard2-plus-fill"></i></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function generate() {
+        let alphabet = $("#alphabet").val();
+        let length = $("#length").val();
+        let result = generateRandomString(alphabet, length);
+        $("#result").val(result);
+        $("#copy").prop("disabled", false);
+    }
+
+    $(function() {
+        $("#alphabet").on("change", function (e) {
+            if ($(this).val().length < 2) {
+                $(this).val("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789");
+            }
+            generate();
+        });
+
+        $("#length").on("change", function (e) {
+            if ($(this).val().length < 1) {
+                $(this).val("8");
+            }
+            generate();
+        });
+
+        $("#generate").on("click", function (e) {
+            generate();
+        });
+
+        $("#result").tooltip({
+            trigger: "manual",
+            title: "Kopyalandı...",
+            placement: "top",
+            customClass: "tooltip-success"
+        });
+
+        $("#copy").on("click", function (e) {
+            let result = $("#result").val();
+            if (result.length === 0) {
+                console.log("Result is empty and it has not been copied");
+                return;
+            }
+            copyToClipboard(result)
+                .then(function () {
+                    $("#result").tooltip('show');
+                    setTimeout(function() {
+                        $("#result").tooltip('hide');
+                    }, 1500);
+                }).catch(function () {
+                    console.error('Copying result to clipboard has failed');
+                });
+        });
+
+        $("#result").on("click", function (e) {
+            let result = $("#result").val();
+            if (result.length === 0) {
+                console.log("Result is empty and it has not been copied");
+                return;
+            }
+            copyToClipboard(result)
+                .then(function () {
+                    $("#result").tooltip('show');
+                    setTimeout(function() {
+                        $("#result").tooltip('hide');
+                    }, 1500);
+                }).catch(function () {
+                console.error('Copying result to clipboard has failed');
+            });
+        });
+    });
+</script>
+
+{% include calculate_menu.html %}

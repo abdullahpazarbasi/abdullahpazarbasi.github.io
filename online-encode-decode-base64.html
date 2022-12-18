@@ -1,0 +1,121 @@
+---
+title: "Online Encode & Decode base64"
+date: null
+layout: calculate
+permalink: null
+categories: null
+tags: null
+---
+
+<script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.js"
+        integrity="sha256-8L3yX9qPmvWSDIIHB3WGTH4RZusxVA0DDmuAo4LjnOE="
+        crossorigin="anonymous"></script>
+
+<div class="form-group">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="plain">Ham</label>
+        </div>
+        <textarea id="plain" class="form-control" rows="3"></textarea>
+        <div class="input-group-append">
+            <button id="copy-plain" type="button" class="form-control btn btn-warning copier" data-clipboard-target="#plain" disabled="disabled"><i class="bi-clipboard2-plus-fill"></i></button>
+        </div>
+    </div>
+    <div class="btn-toolbar mt-3 mb-3" role="toolbar">
+        <div class="btn-group container-fluid" role="group">
+            <button id="encode" type="button" class="form-control btn btn-outline-primary"><i class="bi-caret-down-fill"></i></button>
+            <button id="decode" type="button" class="form-control btn btn-outline-primary"><i class="bi-caret-up-fill"></i></button>
+        </div>
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="encoded">Kodlanmış</label>
+        </div>
+        <textarea id="encoded" class="form-control" rows="3"></textarea>
+        <div class="input-group-append">
+            <button id="copy-encoded" type="button" class="form-control btn btn-warning copier" data-clipboard-target="#encoded" disabled="disabled"><i class="bi-clipboard2-plus-fill"></i></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function encode() {
+        let plain = $("#plain").val();
+        if (plain.length === 0) {
+            return;
+        }
+        let intermediate = CryptoJS.enc.Utf8.parse(plain);
+        let encoded = CryptoJS.enc.Base64.stringify(intermediate);
+        $("#encoded").val(encoded);
+        $("#copy-encoded").prop("disabled", false);
+    }
+
+    function decode() {
+        let encoded = $("#encoded").val();
+        if (encoded.length === 0) {
+            return;
+        }
+        let intermediate = CryptoJS.enc.Base64.parse(encoded);
+        let plain = CryptoJS.enc.Utf8.stringify(intermediate);
+        $("#plain").val(plain);
+        $("#copy-plain").prop("disabled", false);
+    }
+
+    $(function() {
+        $("#encode").on("click", function (e) {
+            encode();
+        });
+
+        $("#decode").on("click", function (e) {
+            decode();
+        });
+
+        $("#plain").tooltip({
+            trigger: "manual",
+            title: "Kopyalandı...",
+            placement: "top",
+            customClass: "tooltip-success"
+        });
+
+        $("#encoded").tooltip({
+            trigger: "manual",
+            title: "Kopyalandı...",
+            placement: "top",
+            customClass: "tooltip-success"
+        });
+
+        $("#copy-plain").on("click", function (e) {
+            let plain = $("#plain").val();
+            if (plain.length === 0) {
+                return;
+            }
+            copyToClipboard(plain)
+                .then(function () {
+                    $("#plain").tooltip('show');
+                    setTimeout(function() {
+                        $("#plain").tooltip('hide');
+                    }, 1500);
+                }).catch(function () {
+                    console.error('Copying plain to clipboard has failed');
+                });
+        });
+
+        $("#copy-encoded").on("click", function (e) {
+            let encoded = $("#encoded").val();
+            if (encoded.length === 0) {
+                return;
+            }
+            copyToClipboard(encoded)
+                .then(function () {
+                    $("#encoded").tooltip('show');
+                    setTimeout(function() {
+                        $("#encoded").tooltip('hide');
+                    }, 1500);
+                }).catch(function () {
+                    console.error('Copying encoded to clipboard has failed');
+                });
+        });
+    });
+</script>
+
+{% include calculate_menu.html %}

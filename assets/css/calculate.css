@@ -1,0 +1,11 @@
+main {
+    margin: 0 1rem;
+}
+
+.tooltip-success .tooltip-inner {
+    background-color: #28a745;
+}
+
+.tooltip-success.bs-tooltip-top .arrow::before {
+    border-top-color: #28a745;
+}
