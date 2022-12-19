@@ -10,11 +10,13 @@ published: true
 
 Yazılım tasarımının bana göre en temel ve projelerin büyüklüğü ile doğru orantılı olarak en fazla baş ağrıtan meselesi… Yine de genellikle problemlerin ana kaynağı olduğu pek az yazılım geliştiricisi tarafından farkedilir. Güçlü yapışıklık ve gevşek bağlaşıklık elde etmek için modüler programlama gerekir.
 
-Modüler programlama, her programcının dilinde pelesenktir ama çok az programcı bunu doğru biçimde uygular.
+Modüler programlama, her programcının dilinde pelesenktir ama çok az programcı bunu doğru biçimde uygular. Modüler programlama, fonksiyonel tasarımı getirir.
+
+> [Fonksiyonel Tasarım Şartnamesi](https://scottmanning.com/content/functional-design-specification/)
 
 ## Modülerizasyon (Modularization) Nedir?
 
-Yazılım sistemini bağımsız çalışabilen birden fazla modüle bölme işlemidir. Tabii ki önce yekpare programlayıp sonra modüllere bölmek şart değil. Tecrübeli bir programcı, inşanın başından itibaren modüler programlama yaparak elde edilebilmesi mümkün olan optimal modülleri elde edebilir. Burada `modül` deyince akıllara gelmesi gereken şey `rutin`, `fonksiyon gövdesi` veya `metot gövdesi` dir.
+Yazılım sistemini bağımsız çalışabilen birden fazla modüle bölme işlemidir. Tabii ki önce yekpare programlayıp sonra modüllere bölmek şart değil. Tecrübeli bir programcı, inşanın başından itibaren modüler programlama yaparak elde edilebilmesi mümkün olan optimal modülleri elde edebilir. Prosedürel programlamada `modül` deyince akıllara gelmesi gereken şey `rutin`, `fonksiyon gövdesi` veya `metot gövdesi` dir. Nesne yönelimli programlamada ise `encapsulation` ilkesi gereği sınıflar/nesneler de modüldür.
 
 Modülerizasyonun veya modüler programlamanın bazı avantajlarını sıralayacak olursak;
 
@@ -82,7 +84,7 @@ Yazılım varlıkları (software entities) arasındaki yakınlık veya benzerlik
 
 #### Mantıksal Bağlaşıklık (Logical Coupling, Evolutionary Coupling or Change Coupling)
 
-Yazılımın sürüm geçmişi ile alakalıdır. Yazılım varlıklarından (software entities) biri değiştiğinde buna bağlı olarak başka hangi yazılım varlıkları hangi sırayla değişmesi gerektiğini tesbit ile ortaya çıkarılabilir. Mesela, bir A sınıfında değişiklik yaptığımda bir B sınıfında da değişiklik yapmam gerekiyorsa A ve B arasında mantıksal bağlaşıklık var denilir.
+Yazılımın sürüm geçmişi ile alakalıdır. Yazılım varlıklarından (software entities) biri değiştiğinde buna bağlı olarak başka hangi yazılım varlıkları hangi sırayla değişmesi gerektiğini tesbit ile ortaya çıkarılabilir. Mesela, bir A sınıfında değişiklik yapıldığında bir B sınıfında da değişiklik yapmak gerekiyorsa A ve B arasında mantıksal bağlaşıklık var denilir.
 
 ### Sıkı Bağlaşık (Tightly Coupled) Sistemin Dezavantajları
 
