@@ -3,8 +3,8 @@ title: "Kredi ile Daire Nasıl Alınır?"
 date: 2022-05-21 10:34:49 +0300
 layout: post
 permalink: /tecrubeler/kredi-ile-ev-daire-konut-nasil-alinir
-categories: [ "tecrubeler" ]
-tags: [ "daire", "ev", "emlak", "bankadan", "konut", "kredi", "kredili", "gayrimenkul", "tapu" ]
+categories: [ "Tecrübeler" ]
+tags: [ "Bankadan", "Daire", "Emlak", "Ev", "Gayrimenkul", "Konut", "Kredi", "Kredili", "Tapu" ]
 published: true
 ---
 

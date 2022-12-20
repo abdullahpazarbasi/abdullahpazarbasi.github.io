@@ -11,5 +11,5 @@ published: true
 1. Erken Deadline’lar
 2. Kırık Camlar Teorisi
 3. Aşkın Mimari (Over Architecting)
-4. Kötü Tasarım
+4. Kötü/Yetersiz Tasarım
 5. Zayıf Yetkinlik
