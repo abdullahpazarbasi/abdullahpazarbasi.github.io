@@ -1,0 +1,87 @@
+---
+title: "Online UUID Üret (Online Generate UUID)"
+date: null
+layout: calculate
+permalink: null
+categories: null
+tags: null
+---
+
+<script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.js"
+        integrity="sha256-8L3yX9qPmvWSDIIHB3WGTH4RZusxVA0DDmuAo4LjnOE="
+        crossorigin="anonymous"></script>
+
+<script>
+    function generateUUIDv4() {
+        return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+            (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+        );
+    }
+</script>
+
+<div class="form-group">
+    <button id="generate" type="button" class="form-control mt-3 mb-3 btn btn-primary">UUID v4 Üret</button>
+    <div class="input-group">
+        <input id="result" type="text" class="form-control text-monospace" data-clipboard-target="#result" placeholder="Sonuç" readonly="readonly" />
+        <div class="input-group-append">
+            <button id="copy" type="button" class="form-control btn btn-warning" data-clipboard-target="#result" disabled="disabled"><i class="bi-clipboard2-plus-fill"></i></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function writeUUIDv4() {
+        let result = generateUUIDv4();
+        $("#result").val(result);
+        $("#copy").prop("disabled", false);
+    }
+
+    $(function() {
+        $("#generate").on("click", function (e) {
+            writeUUIDv4();
+        });
+
+        $("#result").tooltip({
+            trigger: "manual",
+            title: "Kopyalandı...",
+            placement: "top",
+            customClass: "tooltip-success"
+        });
+
+        $("#copy").on("click", function (e) {
+            let result = $("#result").val();
+            if (result.length === 0) {
+                console.log("Result is empty and it has not been copied");
+                return;
+            }
+            copyToClipboard(result)
+                .then(function () {
+                    $("#result").tooltip('show');
+                    setTimeout(function() {
+                        $("#result").tooltip('hide');
+                    }, 1500);
+                }).catch(function () {
+                    console.error('Copying result to clipboard has failed');
+                });
+        });
+
+        $("#result").on("click", function (e) {
+            let result = $("#result").val();
+            if (result.length === 0) {
+                console.log("Result is empty and it has not been copied");
+                return;
+            }
+            copyToClipboard(result)
+                .then(function () {
+                    $("#result").tooltip('show');
+                    setTimeout(function() {
+                        $("#result").tooltip('hide');
+                    }, 1500);
+                }).catch(function () {
+                console.error('Copying result to clipboard has failed');
+            });
+        });
+    });
+</script>
+
+{% include calculate_menu.html %}

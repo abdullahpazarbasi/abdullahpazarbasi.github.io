@@ -1,5 +1,5 @@
 ---
-title: "Online Rasgele Katar Üret (Online Generate Random String)"
+title: "Online Rasgele Sicim Üret (Online Generate Random String)"
 date: null
 layout: calculate
 permalink: null
@@ -16,6 +16,10 @@ tags: null
         }
 
         return result;
+    }
+
+    function calculateProbability(n, r) {
+        return Math.pow(n, r);
     }
 </script>
 
@@ -34,15 +38,21 @@ tags: null
     </div>
     <button id="generate" type="button" class="form-control mt-3 mb-3 btn btn-primary"><i class="bi-caret-down-fill"></i></button>
     <div class="input-group">
-        <input id="result" type="text" class="form-control" data-clipboard-target="#result" placeholder="Sonuç" readonly="readonly" />
+        <input id="result" type="text" class="form-control text-monospace" data-clipboard-target="#result" placeholder="Sonuç" readonly="readonly" />
         <div class="input-group-append">
             <button id="copy" type="button" class="form-control btn btn-warning" data-clipboard-target="#result" disabled="disabled"><i class="bi-clipboard2-plus-fill"></i></button>
         </div>
     </div>
+    <div class="input-group mt-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="probability">Olasılık Sayısı</label>
+        </div>
+        <input id="probability" type="number" class="form-control" autocomplete="off" readonly="readonly" />
+    </div>
 </div>
 
 <script>
-    function generate() {
+    function writeRandomString() {
         let alphabet = $("#alphabet").val();
         let length = $("#length").val();
         let result = generateRandomString(alphabet, length);
@@ -50,23 +60,34 @@ tags: null
         $("#copy").prop("disabled", false);
     }
 
+    function writeProbability() {
+        let alphabet = $("#alphabet").val();
+        let alphabetLength = alphabet.length;
+        let length = $("#length").val();
+        let result = calculateProbability(alphabetLength, length);
+        $("#probability").val(result);
+    }
+
     $(function() {
         $("#alphabet").on("change", function (e) {
             if ($(this).val().length < 2) {
                 $(this).val("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789");
             }
-            generate();
+            writeRandomString();
+            writeProbability();
         });
 
         $("#length").on("change", function (e) {
             if ($(this).val().length < 1) {
                 $(this).val("8");
             }
-            generate();
+            writeRandomString();
+            writeProbability();
         });
 
         $("#generate").on("click", function (e) {
-            generate();
+            writeRandomString();
+            writeProbability();
         });
 
         $("#result").tooltip({
