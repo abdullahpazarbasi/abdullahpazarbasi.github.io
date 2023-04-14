@@ -4,11 +4,9 @@ date: 2023-04-14 17:08:45 +0300
 layout: post
 permalink: /yazilim/tasarim/nesne-yonelimli-programlama-konseptleri
 categories: [ "Yazılım", "Tasarım" ]
-tags: [ "OOP", "Object-Oriented Programming", "Konseptler" ]
+tags: [ "OOP", "Object-Oriented Programming", "Konseptler", "Kavramlar" ]
 published: true
 ---
-
-# Nesne Yönelimli Programlama (Object-Oriented Programming) Konseptleri
 
 OOP (Object Oriented Programming), nesne yönelimli programlama anlamına gelir ve programlama dünyasında oldukça yaygın bir kavramdır. OOP, bir programlama paradigmasıdır ve bu paradigmaya dayanan dillerde programlar nesnelere odaklanır.
 
