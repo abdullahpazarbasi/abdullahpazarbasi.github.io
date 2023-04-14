@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/tasarim/siniflar-nasil-isimlendirilmeli
 categories: [ "Yazılım", "Tasarım" ]
 tags: [ "Class", "İsimlendirme", "Naming", "Nasıl", "Sınıf" ]
-published: true
+published: false
 ---
 
 ## Sınıflara nasıl isim verilmeli
