@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/tasarim/abstract-class-ve-interface-arasindaki-farklar
 categories: [ "Yazılım", "Tasarım" ]
 tags: [ "Abstract Class", "Abstraction", "Arayüz", "Interface", "Soyutlama" ]
-published: true
+published: false
 ---
 
 Farklı tip elemanlar olduğu için karşılaştırılması yersiz gibi düşünülse de iki kavram da birer soyutlama tekniği olduğundan ve birbirlerinin yerine kullanılması mümkün olduğundan dolayı böyle bir karşılaştırma yapılmalı.

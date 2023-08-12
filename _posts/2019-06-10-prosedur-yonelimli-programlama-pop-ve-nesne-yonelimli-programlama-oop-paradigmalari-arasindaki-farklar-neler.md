@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/mimari/prosedur-yonelimli-programlama-pop-ve-nesne-yonelimli-programlama-oop-paradigmalari-arasindaki-farklar-neler
 categories: [ "Yazılım", "Mimari" ]
 tags: [ "Fark", "Karşılaştırma", "Nesne Yönelimli Programlama", "OOP", "POP", "Prosedür Yönelimli Programlama" ]
-published: true
+published: false
 ---
 
 Prosedür yönelimli programlamada algoritmayla uğraşılır.

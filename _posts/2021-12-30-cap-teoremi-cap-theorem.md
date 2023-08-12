@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/mimari/cap-teoremi-cap-theorem
 categories: [ "Yazılım", "Mimari" ]
 tags: [ "Veritabanı" ]
-published: true
+published: false
 ---
 
 CAP Teoremi veya CAP Kanıtsavı. Dağıtık veritabanı yönetim sistemlerine (distributed database management system) ilişkin bir kanıtsavdır. Eric Brewer, bu kanıtsavını 1998 yılında öne sürmüştür. Sav, özetle, tutarlılık (consistency) garantisi, erişilebilirlik (availability) garantisi ve bölümleme hata payından (partitioning tolerance) aynı anda yalnızca ikisinin mümkün olabileceği, üçünün aynı anda mümkün olamayacağıdır.

@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/yazilim-kavramlar-sozluk/adaptive-tasarim
 categories: [ "Yazılım", "Yazılım Kavramları Sözlüğü" ]
 tags: [ "Ne", "Ne demek", "Nedir" ]
-published: true
+published: false
 ---
 
 Sayfa layout’unu türlü ekran ve pencere boyutlarına kademeli olarak uyarlamayı sağlayan tasarım tekniği.

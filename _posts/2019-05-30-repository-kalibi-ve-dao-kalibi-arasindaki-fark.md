@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/tasarim/tasarim-kaliplari/repository-kalibi-ve-dao-kalibi-arasindaki-fark
 categories: [ "Yazılım", "Tasarım", "Tasarım Kalıpları" ]
 tags: [ "DAO", "Data Access Object", "Data Transfer Object", "DTO", "Repository" ]
-published: true
+published: false
 ---
 
 Veri merkezli birçok uygulamada Repository (ki o uygulamada muhtemelen bu, “entity repository”dir) ile DAO (Data Access Object) aynı işi yapar ve birbirinin yerine oturabilir. Fakat fark karmaşık business davranışa sahip uygulamalarda ortaya çıkar.

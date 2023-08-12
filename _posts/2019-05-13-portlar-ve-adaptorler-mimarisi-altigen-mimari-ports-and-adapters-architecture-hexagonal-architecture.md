@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/mimari/portlar-ve-adaptorler-mimarisi-altigen-mimari-ports-and-adapters-architecture-hexagonal-architecture
 categories: [ "Yazılım", "Mimari" ]
 tags: [ "Abstraction", "Adapters", "Adaptörler", "Altıgen", "Arayüz", "Architecture", "Back-End", "Business Logic", "Driven", "Driving", "Entry-Point", "Exit-Point", "Front-End", "Hexagonal", "Interface", "Isolation", "Kapılar", "Katmanlar", "Layers", "Mimari", "Portlar", "Ports", "Soyutlama", "Unit Test", "Yazılım Mimarisi" ]
-published: true
+published: false
 ---
 
 > Bir uygulamanın kullanıcılar, programlar, otomatikleştirilmiş testler veya toplu iş betikleri tarafından eşit bir biçimde güdülmesine ve nihai çalışma zamanı cihazlarından ve veritabanlarından yalıtılmış bir biçimde geliştirilip test edilmesine izin verin.

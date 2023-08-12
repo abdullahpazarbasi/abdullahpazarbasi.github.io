@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/yazilim-kavramlar-sozluk/binary-operator
 categories: [ "Yazılım", "Yazılım Kavramları Sözlüğü" ]
 tags: [ "Ne", "Ne demek", "Nedir" ]
-published: true
+published: false
 ---
 
 İki operand alan operatördür.

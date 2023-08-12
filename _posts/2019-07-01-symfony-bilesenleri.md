@@ -5,7 +5,7 @@ layout: post
 permalink: /platformlar/frameworkler/symfony/symfony-bilesenleri
 categories: [ "Platformlar", "Frameworkler", "Symfony" ]
 tags: [ "Framework", "Symfony" ]
-published: true
+published: false
 ---
 
 **Polyfill Components**: İlgili php sürümünün veya php extension’ının bulunmadığı durumlarda sürümün veya extension ’ın taklit edilmesini sağlayan bileşenlerdir. Bahsedilen PHP sürümleri: 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0 . Bahsedilen PHP extension’ları: apcu/apc, ctype, iconv, grapheme (intl), icu (intl), idn (intl), msgfmt (intl), normalizer (intl), mbstring ve uuid.

@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/tasarim/temiz-bir-restful-api-tasarimi-icin-15-best-practice
 categories: [ "Yazılım", "Tasarım" ]
 tags: [ "API", "Best Practice", "Çabuk Anlaşılabilirlik", "DELETE Metodu", "Doğru Tasarım", "Düzenli İfadeler", "End-Point", "Error-Payload", "GET Metodu", "Hata Tamiri Hızı", "HATEOAS", "Headers", "HTTP", "HTTP Status Codes", "Kararlılık", "Kullanım Kolaylığı", "PATCH Metodu", "PCRE", "POST Metodu", "PUT Metodu", "Query Parameters", "Regular Expressions", "Resource", "REST", "RESTful", "Sayfalama", "Serializasyon", "Serialization Groups", "Sıralama", "Slug Names", "Süzme", "Tasarım", "Uç Nokta", "URI", "UUID", "Versiyonlama" ]
-published: true
+published: false
 ---
 
 Doğru bir API tasarımı, kullanım kolaylığı, çabuk anlaşılabilirlik, hata tamirinde hız ve kararlılığa katkı sağlar. Ayrıca API arkasındaki aplikasyonun doğru bir yapıyla inşa edilmesinde ve geliştirilmesinde geliştiriciyi olumlu yönlendirir.

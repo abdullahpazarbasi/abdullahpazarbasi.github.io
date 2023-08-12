@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/tasarim/nesne-yonelimli-programlamada-takip-edilmesi-gereken-15-onemli-prensip
 categories: [ "Yazılım", "Tasarım" ]
 tags: [ "Abstraction", "Auto-Wiring", "Bileştirme", "Composition", "Delegation", "Dependency Injection", "Dependency Inversion Principle", "DIC", "Doğru Tasarım", "Extending", "Factory", "Helper", "Inheritance", "Interface Segregation Principle", "Kalıtım", "Kapsülleme", "Liskov Substitution Principle", "Nesne Yönelimli Programlama", "Object-Oriented Programming", "OOP", "Open-Closed Principle", "Prensip", "Principle", "Private", "Protected", "Public", "Single Responsibility Principle", "SOLID", "Trait", "Utility" ]
-published: true
+published: false
 ---
 
 ## Sakın Kodu Tekrarlama – DRY (Don’t Repeat Yourself)

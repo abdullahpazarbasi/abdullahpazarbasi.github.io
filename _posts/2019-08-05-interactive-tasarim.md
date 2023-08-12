@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/yazilim-kavramlar-sozluk/interactive-tasarim
 categories: [ "Yazılım", "Yazılım Kavramları Sözlüğü" ]
 tags: [ "Ne", "Ne demek", "Nedir" ]
-published: true
+published: false
 ---
 
 Kullanıcı eylemlerine tepki veren elemanlar barındıran sayfa tasarımı.

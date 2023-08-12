@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/tasarim/baglasiklik-coupling-ve-yapisiklik-cohesion-nedir
 categories: [ "Yazılım", "Tasarım" ]
 tags: [ "Akış", "Alt Sınıf Bağlaşıklığı", "Ardışıl Yapışıklık", "Bağlaşıklık", "Bağlaşım", "Cohesion", "Coincidental Cohesion", "Common Coupling", "Communicational Cohesion", "Content Coupling", "Control Coupling", "Coupling", "Data Coupling", "Data-Structured Coupling", "Functional Cohesion", "Genellerle Bağlaşıklık", "High Cohesion", "İçerik Bağlaşıklığı", "İletişimsel Yapışıklık", "İşlevsel Yapışıklık", "Kontrol Bağlaşıklığı", "Logical Cohesion", "Loosely Coupled", "Low Cohesion", "Mantıksal Yapışıklık", "Modül", "Procedural Cohesion", "Prosedürel Yapışıklık", "Sequential Cohesion", "Single Responsibility Principle", "Stamp Coupling", "Subclass Coupling", "Temporal Cohesion", "Temporal Coupling", "Tesadüfi Yapışıklık", "Tightly Coupled", "Uyum", "Veri Yapılarıyla Bağlaşıklık", "Veriyle Bağlaşıklık", "Yapışıklık", "Zamansal Bağlaşıklık", "Zamansal Yapışıklık" ]
-published: true
+published: false
 ---
 
 Yazılım tasarımının bana göre en temel ve projelerin büyüklüğü ile doğru orantılı olarak en fazla baş ağrıtan meselesi… Yine de genellikle problemlerin ana kaynağı olduğu pek az yazılım geliştiricisi tarafından farkedilir. Güçlü yapışıklık ve gevşek bağlaşıklık elde etmek için modüler programlama gerekir.

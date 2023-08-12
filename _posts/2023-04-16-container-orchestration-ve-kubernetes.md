@@ -5,7 +5,7 @@ layout: post
 permalink: /platformlar/konteynerlestirme/container-orchestration-ve-kubernetes
 categories: [ "Platformlar", "Konteynerlestirme" ]
 tags: [ "Containerization", "Orchestration", "Cluster", "Kubernetes" ]
-published: true
+published: false
 ---
 
 Container 'lar, uygulamaları kolayca taşıyabilen ve çalıştırabilen bir teknolojidir. Ancak, uygulamaları yalnızca tek bir container 'da çalıştırmak yeterli olmayabilir. Birden fazla container 'ın çalışması gerektiğinde, bunların birbirleriyle uyumlu olması ve yönetilmesi gerekir. İşte burada container orchestration devreye girer.

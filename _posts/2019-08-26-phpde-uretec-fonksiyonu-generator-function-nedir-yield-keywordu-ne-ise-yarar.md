@@ -5,7 +5,7 @@ layout: post
 permalink: /platformlar/betik-isleme/php/phpde-uretec-fonksiyonu-generator-function-nedir-yield-keywordu-ne-ise-yarar
 categories: [ "Platformlar", "Betik İşleme", "PHP" ]
 tags: [ "Bellek", "Değer Enjeksiyonu", "Fonksiyon", "Iterator", "Memory", "Ne", "Nedir", "PHP", "Return", "Stack", "Üreteç", "Yield", "Yığın" ]
-published: true
+published: false
 ---
 
 Üreteç fonksiyonları, dizi döndüren fonksiyonlara benzerler. Fakat birer iteratör (iterator) gibi davranırlar.

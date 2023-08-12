@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/tasarim/yukaridan-asagiya-ustten-alta-top-down-ve-asagidan-yukariya-alttan-uste-bottom-up-yaklasimlari-arasindaki-farklar
 categories: [ "Yazılım", "Tasarım" ]
 tags: [ "Alttan Üste", "Approach", "Aşağıdan Yukarıya", "Bottom-Up", "Fark", "Karşılaştırma", "OOP", "POP", "Top-Down", "Üstten Alta", "Yaklaşım", "Yukarıdan Aşağıya" ]
-published: true
+published: false
 ---
 
 Yukarıdan aşağıya yaklaşım temel olarak tersine mühendislik tarzıyla bir programın tamamlayıcı küçük programlarına (veya modüllerine) yönelik sezgi kazanmak için o programın parçalanmasıdır.

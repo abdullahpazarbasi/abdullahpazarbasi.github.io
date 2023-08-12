@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/yazilim-kavramlar-sozluk/reactive-tasarim
 categories: [ "Yazılım", "Yazılım Kavramları Sözlüğü" ]
 tags: [ "Ne", "Ne demek", "Nedir" ]
-published: true
+published: false
 ---
 
 Sayfayı tazelemeksizin sunucudaki veriyi otomatik olarak yoklamayı ve sayfadaki veriyi sunucudan güncellemeyi sağlayan tasarım tekniği.

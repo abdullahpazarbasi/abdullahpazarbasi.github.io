@@ -5,7 +5,7 @@ layout: post
 permalink: /tecrubeler/kredi-ile-ev-daire-konut-nasil-alinir
 categories: [ "Tecrübeler" ]
 tags: [ "Bankadan", "Daire", "Emlak", "Ev", "Gayrimenkul", "Konut", "Kredi", "Kredili", "Tapu" ]
-published: true
+published: false
 ---
 
 Konut alımında kredi nasıl kullanılır? Konut kredisine nasıl başvurulur? Kredili konut alımı nasıl gerçekleşir? Kredili konut alırken nelere dikkat edilmelidir? gibi sorulara cevap olabilecek tecrübedir.

@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/mimari/monolitik-mimari-ve-mikroservisler-mimarisi-arasindaki-farklar
 categories: [ "Yazılım", "Mimari" ]
 tags: [ "API", "API Gateway", "Application", "Architecture", "Deployment", "Dikey Ölçeklendirme", "Fark", "Horizontal Scaling", "Karşılaştırma", "Katmanlar", "Layers", "Load Balancing", "Microservice", "Microservices Architecture", "Mimari", "Monolith", "Monolithic Architecture", "Proje", "Service", "Vertical Scaling", "Yatay Ölçeklendirme", "Yük Dengeleme" ]
-published: true
+published: false
 ---
 
 ## Monolitik Mimari

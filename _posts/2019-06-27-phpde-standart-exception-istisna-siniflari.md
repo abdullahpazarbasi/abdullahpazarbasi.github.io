@@ -5,7 +5,7 @@ layout: post
 permalink: /platformlar/betik-isleme/php/phpde-standart-exception-istisna-siniflari
 categories: [ "Platformlar", "Betik İşleme", "PHP" ]
 tags: [ "Exception", "İstisna", "PHP", "Standart" ]
-published: true
+published: false
 ---
 
 ## \\Exception

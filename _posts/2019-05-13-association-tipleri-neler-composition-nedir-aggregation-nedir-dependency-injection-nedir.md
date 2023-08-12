@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/tasarim/association-tipleri-neler-composition-nedir-aggregation-nedir-dependency-injection-nedir
 categories: [ "Yazılım", "Tasarım" ]
 tags: [ "Aggregate", "Aggregation", "Association", "Bileşik Model", "Bileştirme", "Colleague", "Composite Model", "Composition", "Dependency Injection", "Relationship", "Toparlama" ]
-published: true
+published: false
 ---
 
 “Association” birden fazla nesnenin birbiri ile alakasının adlandırmasıdır. İki nesnenin birbiri ile nasıl bir bağı var ve birbirinin işlevselliğini nasıl kullanırlar sorusunun cevabı association’da saklıdır.

@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/tasarim/oturum-yonetimi-session-management
 categories: [ "Yazılım", "Tasarım" ]
 tags: [ "Mimari", "Oturum", "Session", "Sticky", "Affinity", "Load Balancer", "Yük Dengeleyici", "Ölçeklenebilirlik", "Scalability" ]
-published: true
+published: false
 ---
 
 ## Oturum Nedir? (What is Session?)

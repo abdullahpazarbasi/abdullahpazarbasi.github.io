@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/tasarim/fonksiyonel-programlama-functional-programming-ve-nesne-yonelimli-programlama-object-oriented-programming-arasindaki-farklar
 categories: [ "Yazılım", "Tasarım" ]
 tags: [ "Declarative", "Deklaratif", "FP", "Functional Programming", "İmperatif", "Imperative", "Object-Oriented Programming", "OOP", "Paradigm", "Paradigma", "Programlama Modelleri" ]
-published: true
+published: false
 ---
 
 Öncelikle ikisinin de birer programlama paradigması olduğunu bilelim. Bunlar çok farklı ve hatta bazı noktalarda birbirine zıt iki yaklaşımdır. Uygulama alanına göre biri diğerinden daha iyi olabilir. Hibrit olarak da kullanılabilen yaklaşımlardır. Farklarının farkında olan, tercihini doğru yapar.
