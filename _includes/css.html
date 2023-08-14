@@ -17,8 +17,9 @@
         -webkit-tap-highlight-color: transparent;
     }
 
-    * img {
-        max-width: 100%;
+    html {
+        font-family: monospace;
+        font-size: 12pt;
     }
 
     body {
@@ -26,19 +27,27 @@
         background: var(--background);
         color: var(--foreground);
         text-shadow: 0 0 4px var(--shadow);
-        font-family: monospace;
-        font-size: 12pt;
+        font-family: inherit;
+        font-size: 1rem;
         line-height: 1.5em;
         cursor: default;
     }
 
+    * img {
+        max-width: 100%;
+    }
+
     a {
         color: var(--foreground);
+        font-family: inherit;
+        font-size: 1rem;
         text-decoration: none;
         cursor: pointer;
     }
 
     em {
+        font-family: inherit;
+        font-size: 1rem;
         font-style: normal;
         font-weight: normal;
         color: var(--highlighted);
@@ -47,7 +56,8 @@
 
     h1, h2, h3, h4, h5, h6 {
         display: inline;
-        font-size: 1em;
+        font-family: inherit;
+        font-size: 1rem;
         font-style: normal;
         font-weight: normal;
         line-height: 1.5em;
@@ -64,7 +74,7 @@
         border-color: var(--foreground);
         border-style: solid;
         border-width: 1px;
-        margin: .72em 0;
+        margin: .72rem 0;
         padding: 0;
     }
 
@@ -75,14 +85,14 @@
 
     .matrix {
         display: inline-block;
-        font-family: monospace;
         white-space: pre;
-        line-height: 1em;
+        font-family: inherit;
+        line-height: 1rem;
     }
 
     .vector {
         display: inline;
-        font-family: monospace;
+        font-family: inherit;
     }
 
     a.vector {
@@ -90,7 +100,7 @@
     }
 
     span.rs {
-        padding-right: 1em;
+        padding-right: 1rem;
     }
 
     @keyframes blink {

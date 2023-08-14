@@ -1,16 +1,16 @@
 div.highlighter-rouge {
-    margin: .72em 0;
+    margin: .72rem 0;
     border-top-style: dotted;
     border-top-width: 1px;
     border-top-color: var(--foreground);
     border-bottom-style: dotted;
     border-bottom-width: 1px;
     border-bottom-color: var(--foreground);
-    padding: .72em 0;
+    padding: .72rem 0;
 }
 
 .highlighter-rouge > * {
-    width: calc(100vw - 2em);
+    width: calc(100vw - 2rem);
     overflow: auto;
 }
 
