@@ -1,0 +1,35 @@
+div.highlighter-rouge {
+    margin: .72em 0;
+    border-top-style: dotted;
+    border-top-width: 1px;
+    border-top-color: var(--foreground);
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--foreground);
+    padding: .72em 0;
+}
+
+.highlighter-rouge > * {
+    width: calc(100vw - 2em);
+    overflow: auto;
+}
+
+div.highlighter-rouge {
+    text-shadow: none;
+}
+
+.highlighter-rouge > * {
+    text-shadow: none;
+}
+
+.highlighter-rouge > * > pre {
+    text-shadow: none;
+}
+
+.highlighter-rouge > * > pre > code {
+    text-shadow: none;
+}
+
+.highlighter-rouge > * > pre > code > span {
+    text-shadow: none;
+}

@@ -1,3 +1,15 @@
+<style>
+    footer {
+        margin-top: 2em;
+        padding: 0 .5em;
+    }
+</style>
 <footer>
-  <p>&copy; 2016 - {{ 'now' | date: "%Y" }} | <a href="/gizlilik-ilkeleri">Gizlilik İlkeleri</a> | <a href="/hesapla.html">Hesapla</a> | <a href="/feed.xml" class="icon icon-rss dabbah" style="color: #ee802f;" target="_blank"></a></p>
+    <span id="copyright-label" class="vector vector-footer">(c) 2016 - {{ 'now' | date: "%Y" }}&nbsp;| </span><a id="privacy-policy-link" class="vector vector-footer" href="/gizlilik-ilkeleri">[Gizlilik İlkeleri]</a><span id="privacy-policy-link-end" class="vector vector-footer">&nbsp;| </span><a id="calculate-link" class="vector vector-footer" href="/hesapla.html">[Hesapla]</a><span id="calculate-link-end" class="vector vector-footer">&nbsp;| </span><a id="feed-link" class="vector vector-footer" href="/feed.xml">[Feed]</a>
+
+    <span id="footer-blinking-cursor" class="blinking-cursor" style="display: none;">█</span>
 </footer>
+
+<script>
+    vectorCluster["footer"] = doVacuuming("vector-footer");
+</script>

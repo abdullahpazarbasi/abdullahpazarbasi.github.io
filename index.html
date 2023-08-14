@@ -1,5 +1,5 @@
 ---
-title: Blog
+title: Home
 date: null
 layout: null
 permalink: null
@@ -11,30 +11,64 @@ tags: null
 <html lang="tr">
 {% include head.html %}
 <body>
+{% include loading-screen.html %}
+{% include header.html %}
+<style>
+    main {
+        padding: 0 .5em;
+    }
+
+    section.articles {
+        margin-top: 3em;
+    }
+
+    article {
+        padding: .75em 0;
+    }
+
+    div.article-categories {
+        margin-top: 1.5em;
+    }
+
+    div.pagination {
+        margin-top: 1.5em;
+    }
+</style>
 <main>
-    {% include header.html %}
-    {% include bio.html %}
+    {% include author-bio.html %}
+    {% include author-links.html %}
 
     {% if paginator and paginator.posts %}
     <section class="articles">
+        <h1 class="compact">Son blog yazıları:</h1>
+        <hr/>
         {% for post in paginator.posts %}
-        <article class="article">
+        <article>
             {% if post.title %}
-            <h2 class="article-title">
-                <a href="{{ site.baseurl }}{{ post.url }}"> {{ post.title }} </a>
-            </h2>
+            <a href="{{ site.baseurl }}{{ post.url }}">
+                <h2 class="article-title compact">{{ post.title }}</h2>
+            </a>
             {% endif %}
             {% if post.date %}
-            <small class="date">{{ post.date | date: "%e %B %Y %A" | replace: "January", "Ocak" | replace: "February", "Şubat" | replace: "March", "Mart" | replace: "April", "Nisan" | replace: "May", "Mayıs" | replace: "June", "Haziran" | replace: "July", "Temmuz" | replace: "August", "Ağustos" | replace: "September", "Eylül" | replace: "October", "Ekim" | replace: "November", "Kasım" | replace: "December", "Aralık" | replace: "Sunday", "Pazar" | replace: "Monday", "Pazartesi" | replace: "Tuesday", "Salı" | replace: "Wednesday", "Çarşamba" | replace: "Thursday", "Perşembe" | replace: "Friday", "Cuma" | replace: "Saturday", "Cumartesi" }}</small>
+            <br/>
+            <time>{{ post.date | date: "%e %B %Y %A" | replace: "January", "Ocak" | replace: "February", "Şubat" |
+                replace: "March", "Mart" | replace: "April", "Nisan" | replace: "May", "Mayıs" | replace: "June",
+                "Haziran" | replace: "July", "Temmuz" | replace: "August", "Ağustos" | replace: "September", "Eylül" |
+                replace: "October", "Ekim" | replace: "November", "Kasım" | replace: "December", "Aralık" | replace:
+                "Sunday", "Pazar" | replace: "Monday", "Pazartesi" | replace: "Tuesday", "Salı" | replace: "Wednesday",
+                "Çarşamba" | replace: "Thursday", "Perşembe" | replace: "Friday", "Cuma" | replace: "Saturday",
+                "Cumartesi" }}
+            </time>
             {% endif %}
             {% if post.categories %}
-            <div class="categories">
-                {% for c in post.categories %}
-                <a href="#!" data-base-url="{{site.baseurl}}" class="category">{{ c }}</a>
+            <div class="article-categories">
+                {% for category in post.categories %}
+                <a href="#">[{{ category }}]</a>
                 {% endfor %}
             </div>
             {% endif %}
         </article>
+        <hr/>
         {% endfor %}
         {% if paginator.total_pages > 1 %}
         <!-- pagination -->
@@ -49,9 +83,9 @@ tags: null
             {% if page == paginator.page %}
             <em>{{ page }}</em>
             {% elsif page == 1 %}
-            <a href="{{ '/' | relative_url }}">{{ page }}</a>
+            <a href="{{ '/' | relative_url }}">[{{ page }}]</a>
             {% else %}
-            <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+            <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">[{{ page }}]</a>
             {% endif %}
             {% endfor %}
 
@@ -64,34 +98,41 @@ tags: null
         <!-- /pagination -->
         {% endif %}
     </section>
-    {% elsif site.posts %}
+    {% elsif site and site.posts %}
     <section class="articles">
+        <hr/>
         {% for post in site.posts %}
-        <article class="article">
+        <article>
             {% if post.title %}
-            <h2 class="article-title">
-                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-            </h2>
+            <a href="{{ site.baseurl }}{{ post.url }}">
+                <h2 class="article-title compact">{{ post.title }}</h2>
+            </a>
             {% endif %}
             {% if post.date %}
-            <small class="date">{{ post.date | date: "%e %B %Y %A" | replace: "January", "Ocak" | replace: "February", "Şubat" | replace: "March", "Mart" | replace: "April", "Nisan" | replace: "May", "Mayıs" | replace: "June", "Haziran" | replace: "July", "Temmuz" | replace: "August", "Ağustos" | replace: "September", "Eylül" | replace: "October", "Ekim" | replace: "November", "Kasım" | replace: "December", "Aralık" | replace: "Sunday", "Pazar" | replace: "Monday", "Pazartesi" | replace: "Tuesday", "Salı" | replace: "Wednesday", "Çarşamba" | replace: "Thursday", "Perşembe" | replace: "Friday", "Cuma" | replace: "Saturday", "Cumartesi" }}</small>
+            <br/>
+            <time>{{ post.date | date: "%e %B %Y %A" }}</time>
             {% endif %}
             {% if post.categories %}
-            <div class="categories">
-                {% for c in post.categories %}
-                <a href="#!" data-base-url="{{ site.baseurl }}" class="category">{{ c }}</a>
+            <div class="article-categories">
+                {% for category in post.categories %}
+                <a href="#">[{{ category }}]</a>
                 {% endfor %}
             </div>
             {% endif %}
         </article>
+        <hr/>
         {% endfor %}
     </section>
     {% else %}
-    İçerik yok...
+    <section>
+        No blog...
+    </section>
     {% endif %}
-    {% include footer.html %}
 </main>
-{% include category-modal.html %}
-<a href="#" class="backtotop">&#8593;</a>
+{% include footer.html %}
+{% include screen-interlacing.html %}
+{% include screen-glare.html %}
+{% include back-to-top.html %}
+{% include vector-cluster-distribution.html %}
 </body>
 </html>

@@ -1,0 +1,25 @@
+<style>
+    div.image-box {
+        display: inline-block;
+        background-color: hsl(133 50% 33%);
+        line-height: 0;
+    }
+
+    img.boxed-image {
+        mix-blend-mode: screen;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        opacity: 1;
+    }
+</style>
+<script>
+    let wrappableImages = document.querySelectorAll("img");
+
+    wrappableImages.forEach(function (targetImage) {
+        let wrapper = document.createElement("div");
+        wrapper.classList.add("image-box");
+        targetImage.parentNode.insertBefore(wrapper, targetImage);
+        wrapper.appendChild(targetImage);
+        targetImage.classList.add("boxed-image");
+    });
+</script>

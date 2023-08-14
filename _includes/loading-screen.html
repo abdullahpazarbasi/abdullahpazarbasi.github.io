@@ -1,0 +1,74 @@
+<style>
+    #loading-screen {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9998;
+        background: var(--background);
+    }
+
+    @keyframes loading-screen-blink {
+         0% {
+             opacity: 0
+         }
+         33% {
+             opacity: 1
+         }
+         66% {
+             opacity: 1
+         }
+         100% {
+             opacity: 0
+         }
+     }
+
+    #loading-screen-blinking-cursor {
+        animation: loading-screen-blink 0.4s steps(2, jump-none) infinite;
+        cursor: none;
+    }
+
+    @keyframes loading-screen-interlacing-lines {
+        0% {
+            background-position: 0 0
+        }
+        50% {
+            background-position: 0 0
+        }
+        51% {
+            background-position: 0 2px
+        }
+        100% {
+            background-position: 0 2px
+        }
+    }
+
+    #loading-screen-interlacing {
+        display: block;
+        position: fixed;
+        background: repeating-linear-gradient(transparent 0px 1px, hsl(154 0% 0%/.3) 3px 4px);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        pointer-events: none;
+        animation: loading-screen-interlacing-lines 0.06666666s linear infinite;
+    }
+</style>
+<div id="loading-screen">
+    <span id="loading-screen-blinking-cursor">█</span>
+</div>
+<div id="loading-screen-interlacing"></div>
+<script>
+    window.addEventListener("load", function() {
+        document.getElementById("loading-screen").style.display = "none";
+        document.getElementById("loading-screen-interlacing").style.display = "none";
+    });
+    window.addEventListener("beforeunload", function () {
+        document.getElementById("loading-screen").style.display = "block";
+        document.getElementById("loading-screen-interlacing").style.display = "block";
+    });
+</script>

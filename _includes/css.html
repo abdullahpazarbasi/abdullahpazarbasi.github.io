@@ -1,0 +1,122 @@
+<style>
+    :root {
+        --foreground: hsl(133 84% 70%);
+        --background: hsl(154 50% 5%);
+        --highlighted: hsl(154 100% 80%);
+        --shadow: hsl(154 84% 70%);
+    }
+
+    * {
+        font-family: inherit;
+        font-size: inherit;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        -webkit-user-drag: none;
+        -moz-window-dragging: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    * img {
+        max-width: 100%;
+    }
+
+    body {
+        display: grid;
+        background: var(--background);
+        color: var(--foreground);
+        text-shadow: 0 0 4px var(--shadow);
+        font-family: monospace;
+        font-size: 12pt;
+        line-height: 1.5em;
+        cursor: default;
+    }
+
+    a {
+        color: var(--foreground);
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    em {
+        font-style: normal;
+        font-weight: normal;
+        color: var(--highlighted);
+        text-decoration: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        display: inline;
+        font-size: 1em;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1.5em;
+        color: var(--highlighted);
+        text-decoration: none;
+        vertical-align: -100%;
+    }
+
+    h1.compact, h2.compact, h3.compact, h4.compact, h5.compact, h6.compact {
+        vertical-align: unset;
+    }
+
+    hr {
+        border-color: var(--foreground);
+        border-style: solid;
+        border-width: 1px;
+        margin: .72em 0;
+        padding: 0;
+    }
+
+    hr.double {
+        border-style: solid;
+        border-width: 2px;
+    }
+
+    .matrix {
+        display: inline-block;
+        font-family: monospace;
+        white-space: pre;
+        line-height: 1em;
+    }
+
+    .vector {
+        display: inline;
+        font-family: monospace;
+    }
+
+    a.vector {
+        white-space: nowrap;
+    }
+
+    span.rs {
+        padding-right: 1em;
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 0
+        }
+        33% {
+            opacity: 1
+        }
+        66% {
+            opacity: 1
+        }
+        100% {
+            opacity: 0
+        }
+    }
+
+    span.blinking-cursor {
+        animation: blink 0.4s steps(2, jump-none) infinite;
+        cursor: none;
+    }
+
+    article img {
+        mix-blend-mode: screen;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        opacity: 1;
+    }
+</style>

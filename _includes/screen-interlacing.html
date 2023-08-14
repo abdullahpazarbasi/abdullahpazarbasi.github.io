@@ -1,0 +1,29 @@
+<style>
+    @keyframes screen-interlacing-lines {
+        0% {
+            background-position: 0 0
+        }
+        50% {
+            background-position: 0 0
+        }
+        51% {
+            background-position: 0 2px
+        }
+        100% {
+            background-position: 0 2px
+        }
+    }
+
+    #screen-interlacing {
+        position: fixed;
+        background: repeating-linear-gradient(transparent 0px 1px, hsl(154 0% 0%/.3) 3px 4px);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        pointer-events: none;
+        animation: screen-interlacing-lines 0.06666666s linear infinite;
+    }
+</style>
+<div id="screen-interlacing"></div>

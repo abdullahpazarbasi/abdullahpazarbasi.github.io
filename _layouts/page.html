@@ -1,22 +1,51 @@
 <!doctype html>
 <html lang="tr">
-  {% include head.html %}
-  <body>
-    <main>
-      {% include header.html %}
-      <section class="article">
-        <div class="article-header">
-          {% if page.title %}
-          <h1 class="article-title">{{page.title}}</h1>
-          {% endif %}
-          {% if page.date %}
-          <small class="date">{{ page.date | date: "%e %B %Y %A" | replace: "January", "Ocak" | replace: "February", "Şubat" | replace: "March", "Mart" | replace: "April", "Nisan" | replace: "May", "Mayıs" | replace: "June", "Haziran" | replace: "July", "Temmuz" | replace: "August", "Ağustos" | replace: "September", "Eylül" | replace: "October", "Ekim" | replace: "November", "Kasım" | replace: "December", "Aralık" | replace: "Sunday", "Pazar" | replace: "Monday", "Pazartesi" | replace: "Tuesday", "Salı" | replace: "Wednesday", "Çarşamba" | replace: "Thursday", "Perşembe" | replace: "Friday", "Cuma" | replace: "Saturday", "Cumartesi" }}</small>
-          {% endif %}
-        </div>
-        <div class="content">{{content}}</div>
-      </section>
-      {% include footer.html %}
-    </main>
-    <a href="#" class="backtotop">&#8593;</a>
-  </body>
+{% include head.html %}
+<body>
+{% include header.html %}
+<style>
+    main {
+        padding: 0 .5em;
+    }
+
+    section.article-content {
+        margin-top: 1em;
+    }
+</style>
+<main>
+    <article>
+        {% if page.title %}
+        <hr class="double"/>
+        <h1 id="page-title" class="compact vector vector-page-title">{{page.title}}</h1>
+
+        <span id="page-title-blinking-cursor" class="blinking-cursor" style="display: none;">█</span>
+        <hr class="double"/>
+
+        <script>
+            vectorCluster["page-title"] = doVacuuming("vector-page-title");
+        </script>
+        {% endif %}
+        {% if page.date %}
+        <time>
+            {{ page.date | date: "%e %B %Y %A" | replace: "January", "Ocak" | replace: "February", "Şubat" | replace:
+            "March", "Mart" | replace: "April", "Nisan" | replace: "May", "Mayıs" | replace: "June", "Haziran" |
+            replace: "July", "Temmuz" | replace: "August", "Ağustos" | replace: "September", "Eylül" | replace:
+            "October", "Ekim" | replace: "November", "Kasım" | replace: "December", "Aralık" | replace: "Sunday",
+            "Pazar" | replace: "Monday", "Pazartesi" | replace: "Tuesday", "Salı" | replace: "Wednesday", "Çarşamba" |
+            replace: "Thursday", "Perşembe" | replace: "Friday", "Cuma" | replace: "Saturday", "Cumartesi" }}
+        </time>
+        <br/>
+        {% endif %}
+        <section class="article-content">
+            {{content}}
+        </section>
+    </article>
+</main>
+{% include footer.html %}
+{% include lightbox.html %}
+{% include screen-interlacing.html %}
+{% include screen-glare.html %}
+{% include back-to-top.html %}
+{% include vector-cluster-distribution.html %}
+</body>
 </html>

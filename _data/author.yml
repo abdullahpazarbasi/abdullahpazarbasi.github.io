@@ -1,33 +1,13 @@
 name: Abdullah Pazarbaşı
 dp: https://avatars.githubusercontent.com/u/18077282?v=4
-description: "
-  <p>
-    Expert Software Engineer & Software Architect.
-  </p>
-  <br/>
-  <p>
-    He can be reached through <a href='https://www.linkedin.com/in/mabdullahpazarbasi' target='_blank'>LinkedIn</a>.
-  </p>
-"
-email: mail@abdullahpazarbasi.com
-contact:
-  - title: linkedin
-    url: https://www.linkedin.com/in/mabdullahpazarbasi
-    color: "#0a65c2"
-    bgcolor: ""
-  - title: github
-    url: https://github.com/abdullahpazarbasi
-    color: "#ffffff"
-    bgcolor: ""
-  - title: stackshare
-    url: https://stackshare.io/abdullahpazarbasi/personal
-    color: "#0a90f9"
-    bgcolor: ""
-  - title: medium
-    url: https://medium.com/@abdullahpazarbasi
-    color: "#ffffff"
-    bgcolor: ""
-  - title: email
-    url: mailto:mail@abdullahpazarbasi.com
-    color: "#eedd99"
-    bgcolor: ""
+description: ""
+email: m.abdullah.pazarbasi@gmail.com
+url: https://www.linkedin.com/in/mabdullahpazarbasi
+linkedin:
+  url: https://www.linkedin.com/in/mabdullahpazarbasi
+github:
+  url: https://github.com/abdullahpazarbasi
+stackshare:
+  url: https://stackshare.io/abdullahpazarbasi/personal
+medium:
+  url: https://medium.com/@abdullahpazarbasi

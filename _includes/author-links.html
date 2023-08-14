@@ -1,0 +1,9 @@
+<section class="author-links">
+    <a id="author-links-linked-in" class="vector vector-author-links" href="{{ site.data.author.linkedin.url }}" target="_blank">[LinkedIn]</a><span id="author-links-linked-in-end" class="vector vector-author-links"> </span><a id="author-links-github" class="vector vector-author-links" href="{{ site.data.author.github.url }}" target="_blank">[GitHub]</a><span id="author-links-github-end" class="vector vector-author-links"> </span><a id="author-links-stack-share" class="vector vector-author-links" href="{{ site.data.author.stackshare.url }}" target="_blank">[StackShare]</a><span id="author-links-stack-share-end" class="vector vector-author-links"> </span><a id="author-links-medium" class="vector vector-author-links" href="{{ site.data.author.medium.url }}" target="_blank">[Medium]</a><span id="author-links-medium-end" class="vector vector-author-links"> </span><a id="author-links-mail-to" class="vector vector-author-links" href="mailto:{{ site.data.author.email }}">[E-Mail]</a>
+
+    <span id="author-links-blinking-cursor" class="blinking-cursor" style="display: none;">█</span>
+</section>
+
+<script>
+    vectorCluster["author-links"] = doVacuuming("vector-author-links");
+</script>

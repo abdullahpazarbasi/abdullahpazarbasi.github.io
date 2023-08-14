@@ -5,7 +5,7 @@ layout: post
 permalink: /yazilim/tasarim/test-ikizleri-test-doubles
 categories: [ "Yazılım", "Tasarım" ]
 tags: [ "Test", "Kukla", "Dummy", "Uydurma", "Fake", "Taslak", "Stub", "Casus", "Spy", "Maket", "Mock", "İkiz", "Double" ]
-published: true
+published: false
 ---
 
 ## Kukla (Dummy)

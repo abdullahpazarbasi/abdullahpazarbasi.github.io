@@ -1,0 +1,14 @@
+<script>
+    async function writeAllVectorContents() {
+        for (let [groupKey, vectorMap] of Object.entries(vectorCluster)) {
+            let cursorElement = document.getElementById(groupKey + "-blinking-cursor");
+            cursorElement.style.display = "inline";
+            await writeVectorContents(vectorMap);
+            cursorElement.style.display = "none";
+        }
+    }
+
+    window.addEventListener('load', function () {
+        writeAllVectorContents();
+    });
+</script>

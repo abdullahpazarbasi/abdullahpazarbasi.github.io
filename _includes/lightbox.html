@@ -1,0 +1,57 @@
+<style>
+    section.article-content img {
+        cursor: zoom-in;
+    }
+
+    #lightbox {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+    }
+
+    #lightbox.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #lightbox img {
+        max-width: 90%;
+        max-height: 80%;
+        padding: 4px;
+        background-color: white;
+        border: 2px solid white;
+    }
+</style>
+<script>
+    const lightbox = document.createElement("div");
+    lightbox.id = "lightbox";
+    document.body.appendChild(lightbox);
+
+    const sourceImages = document.querySelectorAll("article section.article-content img");
+    sourceImages.forEach((sourceImage) => {
+        sourceImage.addEventListener("click", (e) => {
+            lightbox.classList.add("active");
+            const boxedImage = document.createElement("img");
+            boxedImage.src = sourceImage.src;
+            while (lightbox.firstChild) {
+                lightbox.removeChild(lightbox.firstChild);
+            }
+            boxedImage.style.setProperty("cursor", "not-allowed");
+            lightbox.appendChild(boxedImage);
+            lightbox.style.setProperty("cursor", "zoom-out");
+        });
+    });
+
+    lightbox.addEventListener("click", (e) => {
+        if (e.target !== e.currentTarget) {
+            return;
+        }
+        lightbox.classList.remove("active");
+    });
+</script>

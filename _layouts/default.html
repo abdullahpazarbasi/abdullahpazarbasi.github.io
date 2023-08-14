@@ -1,14 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-  {% include head.html %}
-  <body>
-    <main>
-      {% include header.html %}
-      <section>
-        {{content}}
-      </section>
-      {% include footer.html %}
-    </main>
-    <a href="#" class="backtotop">&#8593;</a>
-  </body>
+{% include head.html %}
+<body>
+{% include header.html %}
+<style>
+    main {
+        padding: 0 .5em;
+    }
+</style>
+<main>
+    {{content}}
+</main>
+{% include footer.html %}
+{% include screen-interlacing.html %}
+{% include screen-glare.html %}
+{% include back-to-top.html %}
+{% include vector-cluster-distribution.html %}
+</body>
 </html>

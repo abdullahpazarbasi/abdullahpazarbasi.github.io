@@ -40,3 +40,5 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # CSS for syntax highlighting
 # rougify style base16.dark > assets/css/syntax.css
+
+gem "webrick", "~> 1.8"

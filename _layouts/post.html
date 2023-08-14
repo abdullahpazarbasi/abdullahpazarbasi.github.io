@@ -1,38 +1,75 @@
 <!doctype html>
 <html lang="tr">
-  {% include head.html %}
-  <body>
-    <main>
-      {% include header.html %}
-      <section class="article">
-        <div class="article-header">
-          {% if page.title %}
-          <h1 class="article-title">{{page.title}}</h1>
-          {% endif %}
-          {% if page.date %}
-          <small class="date">{{ page.date | date: "%e %B %Y %A" | replace: "January", "Ocak" | replace: "February", "Şubat" | replace: "March", "Mart" | replace: "April", "Nisan" | replace: "May", "Mayıs" | replace: "June", "Haziran" | replace: "July", "Temmuz" | replace: "August", "Ağustos" | replace: "September", "Eylül" | replace: "October", "Ekim" | replace: "November", "Kasım" | replace: "December", "Aralık" | replace: "Sunday", "Pazar" | replace: "Monday", "Pazartesi" | replace: "Tuesday", "Salı" | replace: "Wednesday", "Çarşamba" | replace: "Thursday", "Perşembe" | replace: "Friday", "Cuma" | replace: "Saturday", "Cumartesi" }}</small>
-          {% endif %}
-          {% if page.categories %}
-          <div class="categories">
-            {% for c in page.categories %}
-            <a href="#!" class="category">{{c}}</a>
-            {% endfor %}
-          </div>
-          {% endif %}
-        </div>
-        <div class="content">{{content}}</div>
-        {% if page.tags %}
-        <div class="tags">
-          {% for t in page.tags %}
-          <a href="#!" class="tag">{{t}}</a>
-          {% endfor %}
-        </div>
+{% include head.html %}
+<body>
+{% include header.html %}
+<style>
+    main {
+        padding: 0 .5em;
+    }
+
+    section.article-categories {
+        margin-top: 1em;
+    }
+
+    section.article-content {
+        margin-top: 2em;
+    }
+
+    aside.article-tags {
+        margin-top: 3em;
+    }
+</style>
+<main>
+    <article>
+        {% if page.title %}
+        <hr class="double"/>
+        <h1 id="blog-post-title" class="compact vector vector-blog-post-title">{{page.title}}</h1>
+
+        <span id="blog-post-title-blinking-cursor" class="blinking-cursor" style="display: none;">█</span>
+        <hr class="double"/>
+
+        <script>
+            vectorCluster["blog-post-title"] = doVacuuming("vector-blog-post-title");
+        </script>
         {% endif %}
-      </section>
-      {% include footer.html %}
-    </main>
-    {% include category-modal.html %}
-    {% include tag-modal.html %}
-    <a href="#" class="backtotop">&#8593;</a>
-  </body>
+        {% if page.date %}
+        <time>
+            {{ page.date | date: "%e %B %Y %A" | replace: "January", "Ocak" | replace: "February",
+            "Şubat" | replace: "March", "Mart" | replace: "April", "Nisan" | replace: "May", "Mayıs" | replace:
+            "June", "Haziran" | replace: "July", "Temmuz" | replace: "August", "Ağustos" | replace: "September",
+            "Eylül" | replace: "October", "Ekim" | replace: "November", "Kasım" | replace: "December", "Aralık" |
+            replace: "Sunday", "Pazar" | replace: "Monday", "Pazartesi" | replace: "Tuesday", "Salı" | replace:
+            "Wednesday", "Çarşamba" | replace: "Thursday", "Perşembe" | replace: "Friday", "Cuma" | replace:
+            "Saturday", "Cumartesi" }}
+        </time>
+        <br/>
+        {% endif %}
+        {% if page.categories %}
+        <section class="article-categories">
+            {% for category in page.categories %}
+            <a href="#">[{{ category }}]</a>
+            {% endfor %}
+        </section>
+        {% endif %}
+        <section class="article-content">
+            {{content}}
+        </section>
+    </article>
+    {% if page.tags %}
+    <aside class="article-tags">
+        {% for tag in page.tags %}
+        <a href="#">[{{ tag }}]</a>
+        {% endfor %}
+    </aside>
+    {% endif %}
+</main>
+{% include footer.html %}
+{% include article-image-wrapping.html %}
+{% include lightbox.html %}
+{% include screen-interlacing.html %}
+{% include screen-glare.html %}
+{% include back-to-top.html %}
+{% include vector-cluster-distribution.html %}
+</body>
 </html>

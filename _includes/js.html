@@ -1,0 +1,90 @@
+<script>
+    let vectorCluster = {};
+</script>
+<script>
+    function generateRandomInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    // Write text to a target element with a specified delay in ms
+    async function writeVectorContent(target, content) {
+        // Loop through array of content characters
+        return new Promise((resolve) => {
+            // Make an array of the specified content
+            const contentArray = content.split('');
+
+            // Keep track of the character currently being written
+            let i = 0;
+            let d = 0;
+
+            while (i < contentArray.length) {
+                d += generateRandomInteger(10, 100);
+                ((i) => {
+                    setTimeout(() => {
+                        target.innerHTML += contentArray[i];
+                        // Scroll to the bottom of the screen unless scroll is false
+                        //window.scrollTo(0, document.body.scrollHeight);
+                        // Resolve the promise once the last character is written
+                        if (i === contentArray.length - 1) {
+                            resolve();
+                        }
+                    }, d); // increase delay with each iteration
+                })(i++);
+            }
+        })
+    }
+
+    async function writeNewLine(target) {
+        return new Promise((resolve) => {
+            target.innerHTML += "<br />";
+            //window.scrollTo(0, document.body.scrollHeight);
+            resolve();
+        });
+    }
+
+    function doVacuuming(className) {
+        let idToContentMap = {};
+        const elements = document.getElementsByClassName(className);
+
+        for (let i = 0; i < elements.length; i++) {
+            let id = elements[i].id;
+            let htmlContent = elements[i].innerHTML;
+            idToContentMap[id] = htmlContent.replace(/<br\s*\/?>/g, "\n");
+            elements[i].innerHTML = "";
+        }
+
+        return idToContentMap
+    }
+
+    function decodeHtmlContent(htmlContent) {
+        let txt = document.createElement('textarea');
+        txt.innerHTML = htmlContent;
+
+        return txt.value;
+    }
+
+    async function writeVectorContents(idToContentMap) {
+        for (let [id, htmlContent] of Object.entries(idToContentMap)) {
+            let content = decodeHtmlContent(htmlContent);
+            let target = document.getElementById(id);
+            let lines = content.split("\n");
+            let numberOfLines = lines.length;
+            for (let i = 0; i < numberOfLines; i++) {
+                let line = lines[i];
+                if (line !== "") {
+                    await writeVectorContent(target, line);
+                }
+                if (i < (numberOfLines - 1)) {
+                    await writeNewLine(target);
+                }
+            }
+        }
+    }
+
+    async function hideAllBlinkingCursors() {
+        const elements = document.getElementsByClassName("blinking-cursor");
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = "none";
+        }
+    }
+</script>

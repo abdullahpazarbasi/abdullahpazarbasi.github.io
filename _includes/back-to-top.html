@@ -1,0 +1,30 @@
+<style>
+    html, body {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        display: grid;
+    }
+
+    .back-to-top {
+        --offset: 3em;
+
+        position: sticky;
+        bottom: 1em;
+        place-self: end;
+        margin-top: calc(100vh + var(--offset));
+        margin-right: 1em;
+        margin-bottom: unset;
+        margin-left: unset;
+
+        /* visual styling */
+        text-decoration: none;
+        padding: 1em 1.618em 1em 1.618em;
+        border-width: 2px;
+        border-style: solid;
+        border-color: var(--foreground);
+        white-space: nowrap;
+    }
+</style>
+<a href="#" class="backtotop back-to-top">&#8593;</a>
