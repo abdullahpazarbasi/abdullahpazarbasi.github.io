@@ -1,12 +1,6 @@
 <style>
-    :root {
-        --foreground: hsl(133 84% 70%);
-        --background: hsl(154 50% 5%);
-        --highlighted: hsl(154 100% 80%);
-        --shadow: hsl(154 84% 70%);
-    }
-
-    * {
+    *, *:before, *:after {
+        box-sizing: inherit;
         font-family: inherit;
         font-size: inherit;
         text-decoration: none;
@@ -17,9 +11,20 @@
         -webkit-tap-highlight-color: transparent;
     }
 
+    :root {
+        --foreground: hsl(133 84% 70%);
+        --background: hsl(154 50% 5%);
+        --highlighted: hsl(154 100% 80%);
+        --shadow: hsl(154 84% 70%);
+    }
+
     html {
         font-family: monospace;
         font-size: 12pt;
+        -moz-text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+        font-size-adjust: none;
     }
 
     body {
