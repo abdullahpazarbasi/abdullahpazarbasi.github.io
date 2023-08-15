@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Info</title>
+    <script>
+        function writeInfo() {
+            const info = document.getElementById("info");
+            const viewportWidthInPixels = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            const viewportHeightInPixels = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            const horizontalPPI = 96; // document.getElementById("box").offsetWidth;
+            const verticalPPI = 96; // document.getElementById("box").offsetHeight;
+            const dpr = window.devicePixelRatio;
+            const viewportWidthInInches = viewportWidthInPixels / horizontalPPI;
+            const viewportHeightInInches = viewportHeightInPixels / verticalPPI;
+            const viewportWidthInPoints = viewportWidthInPixels * 72 / horizontalPPI;
+            const viewportHeightInPoints = viewportHeightInPixels * 72 / verticalPPI;
+            const viewportWidthInPicas = viewportWidthInPoints / 12;
+            const viewportHeightInPicas = viewportHeightInPoints / 12;
+            const viewportWidthInMillimeters = viewportWidthInInches * 25.4;
+            const viewportHeightInMillimeters = viewportHeightInInches * 25.4;
+            info.innerHTML += "screen width: " + screen.width + " px\n";
+            info.innerHTML += "screen height: " + screen.height + " px\n";
+            info.innerHTML += "screen available width: " + screen.availWidth + " px\n";
+            info.innerHTML += "screen available height: " + screen.availHeight + " px\n";
+            info.innerHTML += "screen orientation: " + screen.orientation.type + "\n";
+            info.innerHTML += "screen pixel depth: " + screen.pixelDepth + " b\n";
+            info.innerHTML += "screen color depth: " + screen.colorDepth + " b\n";
+            info.innerHTML += "window width: " + window.outerWidth + " px\n";
+            info.innerHTML += "window height: " + window.outerHeight + " px\n";
+            info.innerHTML += "screen horizontal ppi: " + horizontalPPI + " px/in\n";
+            info.innerHTML += "screen vertical ppi: " + verticalPPI + " px/in\n";
+            info.innerHTML += "device pixel ratio (DPR): " + dpr + " dot/px\n";
+            info.innerHTML += "screen horizontal dpi: " + (horizontalPPI * dpr) + " dot/in\n";
+            info.innerHTML += "screen vertical dpi: " + (verticalPPI * dpr) + " dot/in\n";
+            info.innerHTML += "viewport width: " + viewportWidthInPixels + " px\n";
+            info.innerHTML += "viewport height: " + viewportHeightInPixels + " px\n";
+            info.innerHTML += "viewport width: " + viewportWidthInPoints + " pt\n";
+            info.innerHTML += "viewport height: " + viewportHeightInPoints + " pt\n";
+            info.innerHTML += "viewport width: " + viewportWidthInPicas + " pc\n";
+            info.innerHTML += "viewport height: " + viewportHeightInPicas + " pc\n";
+            info.innerHTML += "viewport width: " + viewportWidthInInches + " in\n";
+            info.innerHTML += "viewport height: " + viewportHeightInInches + " in\n";
+            info.innerHTML += "viewport width: " + viewportWidthInMillimeters + " mm\n";
+            info.innerHTML += "viewport height: " + viewportHeightInMillimeters + " mm\n";
+            info.innerHTML += "window screen top: " + (window.screenTop || window.screenY) + " px\n";
+            info.innerHTML += "window screen left: " + (window.screenLeft || window.screenX) + " px\n";
+            info.innerHTML += "max touch points: " + navigator.maxTouchPoints + "\n";
+            info.innerHTML += "user agent: " + navigator.userAgent + "\n";
+        }
+    </script>
+</head>
+<body onload="writeInfo()">
+<!-- <div id="box" style="width: 1in !important; height: 1in !important;"></div> -->
+<pre id="info"></pre>
+</body>
+</html>
