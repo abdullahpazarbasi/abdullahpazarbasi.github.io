@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Device Info</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-size: 10pt;
+        }
+    </style>
     <script>
-        function writeInfo() {
-            const info = document.getElementById("info");
+        function writeScreenMetrics() {
+            const screenWidthInPixels = screen.width;
+            const screenHeightInPixels = screen.height;
+            const screenAspectRatio = screenWidthInPixels / screenHeightInPixels;
+            const windowWidthInPixels = window.outerWidth;
+            const windowHeightInPixels = window.outerHeight;
             const viewportWidthInPixels = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
             const viewportHeightInPixels = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
             const horizontalPPI = 96; // document.getElementById("box").offsetWidth;
             const verticalPPI = 96; // document.getElementById("box").offsetHeight;
             const dpr = window.devicePixelRatio;
+            const viewportScaleInPercent = windowWidthInPixels / viewportWidthInPixels * 100;
             const viewportWidthInInches = viewportWidthInPixels / horizontalPPI;
             const viewportHeightInInches = viewportHeightInPixels / verticalPPI;
             const viewportWidthInPoints = viewportWidthInPixels * 72 / horizontalPPI;
@@ -20,39 +32,189 @@
             const viewportHeightInPicas = viewportHeightInPoints / 12;
             const viewportWidthInMillimeters = viewportWidthInInches * 25.4;
             const viewportHeightInMillimeters = viewportHeightInInches * 25.4;
-            info.innerHTML += "screen width: " + screen.width + " px\n";
-            info.innerHTML += "screen height: " + screen.height + " px\n";
-            info.innerHTML += "screen available width: " + screen.availWidth + " px\n";
-            info.innerHTML += "screen available height: " + screen.availHeight + " px\n";
-            info.innerHTML += "screen orientation: " + screen.orientation.type + "\n";
-            info.innerHTML += "screen pixel depth: " + screen.pixelDepth + " b\n";
-            info.innerHTML += "screen color depth: " + screen.colorDepth + " b\n";
-            info.innerHTML += "window width: " + window.outerWidth + " px\n";
-            info.innerHTML += "window height: " + window.outerHeight + " px\n";
-            info.innerHTML += "screen horizontal ppi: " + horizontalPPI + " px/in\n";
-            info.innerHTML += "screen vertical ppi: " + verticalPPI + " px/in\n";
-            info.innerHTML += "device pixel ratio (DPR): " + dpr + " dot/px\n";
-            info.innerHTML += "screen horizontal dpi: " + (horizontalPPI * dpr) + " dot/in\n";
-            info.innerHTML += "screen vertical dpi: " + (verticalPPI * dpr) + " dot/in\n";
-            info.innerHTML += "viewport width: " + viewportWidthInPixels + " px\n";
-            info.innerHTML += "viewport height: " + viewportHeightInPixels + " px\n";
-            info.innerHTML += "viewport width: " + viewportWidthInPoints + " pt\n";
-            info.innerHTML += "viewport height: " + viewportHeightInPoints + " pt\n";
-            info.innerHTML += "viewport width: " + viewportWidthInPicas + " pc\n";
-            info.innerHTML += "viewport height: " + viewportHeightInPicas + " pc\n";
-            info.innerHTML += "viewport width: " + viewportWidthInInches + " in\n";
-            info.innerHTML += "viewport height: " + viewportHeightInInches + " in\n";
-            info.innerHTML += "viewport width: " + viewportWidthInMillimeters + " mm\n";
-            info.innerHTML += "viewport height: " + viewportHeightInMillimeters + " mm\n";
-            info.innerHTML += "window screen top: " + (window.screenTop || window.screenY) + " px\n";
-            info.innerHTML += "window screen left: " + (window.screenLeft || window.screenX) + " px\n";
-            info.innerHTML += "max touch points: " + navigator.maxTouchPoints + "\n";
-            info.innerHTML += "user agent: " + navigator.userAgent + "\n";
+            document.getElementById("screen-width-in-pixels").innerHTML = screenWidthInPixels.toString();
+            document.getElementById("screen-height-in-pixels").innerHTML = screenHeightInPixels.toString();
+            document.getElementById("screen-aspect-ratio").innerHTML = screenAspectRatio.toString();
+            document.getElementById("screen-available-width-in-pixels").innerHTML = screen.availWidth.toString();
+            document.getElementById("screen-available-height-in-pixels").innerHTML = screen.availHeight.toString();
+            document.getElementById("screen-orientation").innerHTML = screen.orientation.type;
+            document.getElementById("screen-pixel-depth").innerHTML = screen.pixelDepth.toString();
+            document.getElementById("screen-color-depth").innerHTML = screen.colorDepth.toString();
+            document.getElementById("device-pixel-ratio").innerHTML = dpr.toString();
+            document.getElementById("horizontal-pixel-density").innerHTML = horizontalPPI.toString();
+            document.getElementById("vertical-pixel-density").innerHTML = verticalPPI.toString();
+            document.getElementById("horizontal-dot-density").innerHTML = (horizontalPPI * dpr).toString();
+            document.getElementById("vertical-dot-density").innerHTML = (verticalPPI * dpr).toString();
+            document.getElementById("window-left-in-pixels").innerHTML = (window.screenLeft || window.screenX).toString();
+            document.getElementById("window-top-in-pixels").innerHTML = (window.screenTop || window.screenY).toString();
+            document.getElementById("window-width-in-pixels").innerHTML = windowWidthInPixels.toString();
+            document.getElementById("window-height-in-pixels").innerHTML = windowHeightInPixels.toString();
+            document.getElementById("viewport-width-in-pixels").innerHTML = viewportWidthInPixels.toString();
+            document.getElementById("viewport-height-in-pixels").innerHTML = viewportHeightInPixels.toString();
+            document.getElementById("viewport-scale-in-percent").innerHTML = viewportScaleInPercent.toString();
+            document.getElementById("viewport-width-in-points").innerHTML = viewportWidthInPoints.toString();
+            document.getElementById("viewport-height-in-points").innerHTML = viewportHeightInPoints.toString();
+            document.getElementById("viewport-width-in-picas").innerHTML = viewportWidthInPicas.toString();
+            document.getElementById("viewport-height-in-picas").innerHTML = viewportHeightInPicas.toString();
+            document.getElementById("viewport-width-in-inches").innerHTML = viewportWidthInInches.toString();
+            document.getElementById("viewport-height-in-inches").innerHTML = viewportHeightInInches.toString();
+            document.getElementById("viewport-width-in-millimeters").innerHTML = viewportWidthInMillimeters.toString();
+            document.getElementById("viewport-height-in-millimeters").innerHTML = viewportHeightInMillimeters.toString();
+            document.getElementById("max-touch-points").innerHTML = navigator.maxTouchPoints.toString();
+            document.getElementById("user-agent").innerHTML = navigator.userAgent;
+            document.getElementById("test").innerHTML = viewportScaleInPercent.toString();
+        }
+
+        function writeFullSizedBoxSizes() {
+            document.getElementById("full-sized-box-width-in-pixels").innerHTML = document.getElementById("full-sized-box").offsetWidth.toString();
+            document.getElementById("full-sized-box-height-in-pixels").innerHTML = document.getElementById("full-sized-box").offsetHeight.toString();
+        }
+
+        function collectMetrics() {
+            setInterval(writeScreenMetrics, 1000);
+            setInterval(writeFullSizedBoxSizes, 1000);
         }
     </script>
+    <style>
+        #full-sized-box {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border-style: solid;
+            border-width: 2px;
+            border-color: red;
+        }
+
+        #metric-box {
+            display: block;
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            width: calc(100% - 2rem);
+            height: calc(100% - 2rem);
+            overflow: auto;
+            font-family: sans-serif;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul > li {
+            margin: 0;
+            padding: .25em .15em;
+            list-style: none;
+        }
+
+        ul > li:nth-child(odd) {
+            background-color: #666666;
+        }
+
+        ul > li:nth-child(even) {
+            background-color: #999999;
+        }
+
+        ul > li > span.label {
+            font-weight: bold;
+        }
+
+        ul > li:nth-child(odd) > span {
+            color: #dddddd;
+        }
+
+        ul > li:nth-child(even) > span {
+            color: #333333;
+        }
+
+        ul > li:nth-child(odd) > span.label {
+            color: #dddddd;
+        }
+
+        ul > li:nth-child(even) > span.label {
+            color: #333333;
+        }
+
+        ul > li:nth-child(odd) > span.unit {
+            color: #dddddd;
+        }
+
+        ul > li:nth-child(even) > span.unit {
+            color: #333333;
+        }
+    </style>
 </head>
-<body onload="writeInfo()">
-<!-- <div id="box" style="width: 1in !important; height: 1in !important;"></div> -->
-<pre id="info"></pre>
+<body onload="collectMetrics()">
+<div id="full-sized-box"></div>
+<div id="metric-box">
+    <ul>
+        <li><span class="label">screen width: </span><span id="screen-width-in-pixels"></span><span
+                class="unit"> px</span></li>
+        <li><span class="label">screen height: </span><span id="screen-height-in-pixels"></span><span
+                class="unit"> px</span></li>
+        <li><span class="label">screen aspect ratio: </span><span id="screen-aspect-ratio"></span><span
+                class="unit"></span></li>
+        <li><span class="label">screen available width: </span><span id="screen-available-width-in-pixels"></span><span
+                class="unit"> px</span></li>
+        <li><span class="label">screen available height: </span><span
+                id="screen-available-height-in-pixels"></span><span class="unit"> px</span></li>
+        <li><span class="label">screen orientation: </span><span id="screen-orientation"></span><span
+                class="unit"></span></li>
+        <li><span class="label">screen pixel depth: </span><span id="screen-pixel-depth"></span><span
+                class="unit"> b</span></li>
+        <li><span class="label">screen color depth: </span><span id="screen-color-depth"></span><span
+                class="unit"> b</span></li>
+        <li><span class="label">device pixel ratio (DPR): </span><span id="device-pixel-ratio"></span><span
+                class="unit"> dot/px</span></li>
+        <li><span class="label">horizontal pixel density: </span><span id="horizontal-pixel-density"></span><span
+                class="unit"> px/in</span></li>
+        <li><span class="label">vertical pixel density: </span><span id="vertical-pixel-density"></span><span
+                class="unit"> px/in</span></li>
+        <li><span class="label">horizontal dot density: </span><span id="horizontal-dot-density"></span><span
+                class="unit"> dot/in</span></li>
+        <li><span class="label">vertical dot density: </span><span id="vertical-dot-density"></span><span class="unit"> dot/in</span>
+        </li>
+        <li><span class="label">window left: </span><span id="window-left-in-pixels"></span><span
+                class="unit"> px</span></li>
+        <li><span class="label">window top: </span><span id="window-top-in-pixels"></span><span class="unit"> px</span>
+        </li>
+        <li><span class="label">window width: </span><span id="window-width-in-pixels"></span><span
+                class="unit"> px</span></li>
+        <li><span class="label">window height: </span><span id="window-height-in-pixels"></span><span
+                class="unit"> px</span></li>
+        <li><span class="label">viewport width: </span><span id="viewport-width-in-pixels"></span><span
+                class="unit"> px</span></li>
+        <li><span class="label">viewport height: </span><span id="viewport-height-in-pixels"></span><span class="unit"> px</span>
+        </li>
+        <li><span class="label">viewport scale: </span><span id="viewport-scale-in-percent"></span><span
+                class="unit"> %</span></li>
+        <li><span class="label">viewport width: </span><span id="viewport-width-in-points"></span><span
+                class="unit"> pt</span></li>
+        <li><span class="label">viewport height: </span><span id="viewport-height-in-points"></span><span class="unit"> pt</span>
+        </li>
+        <li><span class="label">viewport width: </span><span id="viewport-width-in-picas"></span><span
+                class="unit"> pc</span></li>
+        <li><span class="label">viewport height: </span><span id="viewport-height-in-picas"></span><span class="unit"> pc</span>
+        </li>
+        <li><span class="label">viewport width: </span><span id="viewport-width-in-inches"></span><span
+                class="unit"> in</span></li>
+        <li><span class="label">viewport height: </span><span id="viewport-height-in-inches"></span><span class="unit"> in</span>
+        </li>
+        <li><span class="label">viewport width: </span><span id="viewport-width-in-millimeters"></span><span
+                class="unit"> mm</span></li>
+        <li><span class="label">viewport height: </span><span id="viewport-height-in-millimeters"></span><span
+                class="unit"> mm</span></li>
+        <li><span class="label">max. touch points: </span><span id="max-touch-points"></span><span class="unit"></span>
+        </li>
+        <li><span class="label">user agent: </span><span id="user-agent"></span><span class="unit"></span></li>
+        <li><span class="label">test: </span><span id="test"></span><span class="unit"></span></li>
+        <li><span class="label">full-sized box width: </span><span id="full-sized-box-width-in-pixels"></span><span class="unit"> px</span></li>
+        <li><span class="label">full-sized box height: </span><span id="full-sized-box-height-in-pixels"></span><span class="unit"> px</span></li>
+    </ul>
+</div>
 </body>
 </html>
