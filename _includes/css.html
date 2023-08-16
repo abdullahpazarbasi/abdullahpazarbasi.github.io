@@ -24,8 +24,33 @@
         -moz-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
         text-size-adjust: 100%;
+        -moz-font-size-adjust: none;
         -webkit-font-size-adjust: none;
         font-size-adjust: none;
+    }
+
+    @media screen and (min-width: 360px) {
+        html {
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 359px) {
+        html {
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (min-width: 280px) and (max-width: 319px) {
+        html {
+            font-size: 12px;
+        }
+    }
+
+    @media screen and (max-width: 279px) {
+        html {
+            font-size: 10px;
+        }
     }
 
     body {
