@@ -1,4 +1,9 @@
 <style>
+    @font-face {
+        font-family: "Courier";
+        src: url("/assets/fonts/courier.ttf") format("truetype");
+    }
+
     *, *:before, *:after {
         box-sizing: inherit;
         font-family: inherit;
@@ -19,7 +24,8 @@
     }
 
     html {
-        font-family: monospace;
+        font-family: "Courier", monospace;
+        font-weight: bold;
         font-size: 12pt;
         -moz-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
@@ -29,7 +35,19 @@
         font-size-adjust: none;
     }
 
-    @media screen and (min-width: 450px) {
+    @media screen and (min-width: 550px) {
+        html {
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 549px) {
+        html {
+            font-size: 17px;
+        }
+    }
+
+    @media screen and (min-width: 450px) and (max-width: 479px) {
         html {
             font-size: 16px;
         }
@@ -98,7 +116,7 @@
         font-family: inherit;
         font-size: 1rem;
         font-style: normal;
-        font-weight: normal;
+        font-weight: inherit;
         color: var(--highlighted);
         text-decoration: none;
     }
@@ -108,7 +126,7 @@
         font-family: inherit;
         font-size: 1rem;
         font-style: normal;
-        font-weight: normal;
+        font-weight: inherit;
         line-height: 1.5em;
         color: var(--highlighted);
         text-decoration: none;
