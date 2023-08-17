@@ -34,8 +34,6 @@ Projenin bakımı (maintenance) esnasında bug avına çıkıldığında, progra
 
 TDD, top-down yaklaşımını getirir. Yani tasarımcıyı dıştan içe tasarıma, yani en üst seviye katmandan en alt seviye katmana doğru bir tasarıma çeker. Nesne yönelimli yaklaşım ise geliştiriciyi bottom-up yaklaşımına iter. Bottom-up yaklaşımı “önce nesneleri belirle” demektir. Nesne yönelimli yaklaşım, önce alt katmanlar ile uğraşmaya iter. Oysa nesne yönelimli programlamada top-down ve bottom-up yaklaşımları beraber kullanılabilir, kullanılmalıdır. Bir yandan interface’ler, contract’lar şekillendirilirken bir yandan test-case’ler ortaya çıkarılabilir. Mimarinin her katmanında aynı noktaya hem 0 derece hem 180 derece açıdan bakılarak TDD ve OOP cem edilebilir.
 
----
-
 #### Birim (Unit) Ne Demek?
 
 Birim, bir projenin en küçük modülüne denir. Projeye göre, en küçük modül; fonksiyon, metod, sınıf veya bir uygulama olabilir. Amaç, projeyi olabilecek en küçük boyutlu birimlere ayırmak, bağımlılıklardan mümkün olduğunca kurtarmak ve test etmek. Tüm birimler doğru çalışıyorsa “tüm proje doğru çalışıyor demektir” yargısına varılır.

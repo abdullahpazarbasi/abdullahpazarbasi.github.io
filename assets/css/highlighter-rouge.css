@@ -9,6 +9,10 @@ div.highlighter-rouge {
     padding: .72rem 0;
 }
 
+code.highlighter-rouge {
+    color: var(--highlighted);
+}
+
 .highlighter-rouge > * {
     width: calc(100vw - 2rem);
     overflow: auto;
